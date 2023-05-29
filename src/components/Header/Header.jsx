@@ -2,7 +2,7 @@ import React from 'react'
 import { dataPage } from '../../assets/data/data'
 import './Header.scss'
 import User__foto from "../../assets/image/user.png"
-import { Link } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 
 function Header() {
   const user__Data = [
@@ -24,12 +24,18 @@ function Header() {
     }
   })
 
+  const local = useLocation()
+  const navigate = useNavigate()
+  if(local.pathname == '/home'){
+    navigate('/')
+  }
+  console.log(local);
 
   return (
     <div className={scrol ? 'active header__sass' : 'header__sass'}>
       <div className="container">
         <div className="header__inner">
-          <h1>Aishe & Safiyem</h1>
+          <h1>𝐴𝑖𝑠ℎ𝑒 & 𝑆𝑎𝑓𝑖𝑦𝑒𝑚</h1>
           <ul>
             {
               dataPage?.map((e) => (
