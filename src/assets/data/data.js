@@ -23,6 +23,8 @@ export const listData = [
         list_name: 'A & Furst',
         list_text: '1 Cushion-cut London Blue Topaz 13x10 mm weight 7.06 carats.',
         price: 24,
+        category: 'kulon',
+        product_text: 'Abdurasul uyga ketti ozi bilan olib ketdi, u bilan esa Mumtozham ketdi.',
         image: [
             {
                 image_id: 1,
@@ -39,6 +41,8 @@ export const listData = [
         list_name: 'C & Machon',
         list_text: '1 Cushion-cut London Blue Topaz 13x10 mm weight 7.06 carats.',
         price: 14,
+        category: 'uzuk',
+        product_text: 'Abdurasul uyga ketti ozi bilan olib ketdi, u bilan esa Mumtozham ketdi.',
         image: [
             {
                 image_id: 3,
@@ -55,6 +59,8 @@ export const listData = [
         list_name: 'B & Doctor',
         list_text: '1 Cushion-cut London Blue Topaz 13x10 mm weight 7.06 carats.',
         price: 42,
+        category: 'braslet',
+        product_text: 'Abdurasul uyga ketti ozi bilan olib ketdi, u bilan esa Mumtozham ketdi.',
         image: [
             {
                 image_id: 5,
@@ -71,6 +77,8 @@ export const listData = [
         list_name: 'D & Addd',
         list_text: '1 Cushion-cut London Blue Topaz 13x10 mm weight 7.06 carats.',
         price: 12,
+        category: 'kulon',
+        product_text: 'Abdurasul uyga ketti ozi bilan olib ketdi, u bilan esa Mumtozham ketdi.',
         image: [
             {
                 image_id: 7,
@@ -81,4 +89,16 @@ export const listData = [
                 image_url: 'https://cdn.shopify.com/s/files/1/0413/6385/products/A-FURST-DYNAMITE-COCKTAIL-RING-LONDON-BLUE-TOPAZ-DIAMONDS-BLACKENED-GOLD-A1301NUL11_800x.jpg?v=1606520468'
             }]
     },
+]
+
+
+export const dataSearch = [
+    {
+        id: 1,
+        name: 'Search...'
+    },
+    {
+        id:2,
+        name: 'Поиск...'
+    }
 ]

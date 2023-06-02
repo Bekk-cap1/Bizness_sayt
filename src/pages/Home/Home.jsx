@@ -9,7 +9,7 @@ import Logo from '../../assets/image/logo.png'
 
 // import required modules
 import { Autoplay, Pagination, Navigation } from 'swiper';
-import { listData } from '../../assets/data/data';
+import { dataPage, dataSearch, listData } from '../../assets/data/data';
 // import { Scrollbar } from "swiper";
 
 function Home() {
@@ -53,7 +53,7 @@ function Home() {
             </Swiper>
           </div>
           <div className="search">
-            <input id='inp_search' type="search" />
+            <input id='inp_search' type="search" placeholder={dataSearch[0].name} />
             <label htmlFor="inp_search"><i class="bi bi-search"></i></label>
           </div>
 
@@ -80,7 +80,7 @@ function Home() {
                       className="mySwiper"
                     >
                       {
-                        e.image.map((t)=>(
+                        e.image.map((t) => (
                           <SwiperSlide id={t.image_id}><img src={t.image_url} alt="" /></SwiperSlide>
                         ))
                       }
