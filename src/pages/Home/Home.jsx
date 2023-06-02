@@ -9,6 +9,7 @@ import Logo from '../../assets/image/logo.png'
 
 // import required modules
 import { Autoplay, Pagination, Navigation } from 'swiper';
+import { listData } from '../../assets/data/data';
 // import { Scrollbar } from "swiper";
 
 function Home() {
@@ -55,38 +56,44 @@ function Home() {
             <input id='inp_search' type="search" />
             <label htmlFor="inp_search"><i class="bi bi-search"></i></label>
           </div>
-          
+
           <div className="list">
             <h2 className='assort'>Assortiment</h2>
             <hr />
             <ul>
-              <li>
+              {
+                listData?.map((e) => (
 
-                <Swiper
-                  spaceBetween={30}
-                  centeredSlides={true}
-                  autoplay={{
-                    delay: 2500,
-                    disableOnInteraction: false,
-                  }}
-                  pagination={{
-                    clickable: true,
-                  }}
-                  navigation={true}
-                  modules={[Autoplay, Pagination, Navigation]}
-                  className="mySwiper"
-                ><SwiperSlide><img src="https://cdn.shopify.com/s/files/1/0413/6385/products/A-FURST-DYNAMITE-COCKTAIL-RING-LONDON-BLUE-TOPAZ-DIAMONDS-BLACKENED-GOLD-A1301NUL11_2_800x.jpg?v=1606520441" alt="" /></SwiperSlide>
-                <SwiperSlide><img src="https://cdn.shopify.com/s/files/1/0413/6385/products/A-FURST-DYNAMITE-COCKTAIL-RING-LONDON-BLUE-TOPAZ-DIAMONDS-BLACKENED-GOLD-A1301NUL11_800x.jpg?v=1606520468" alt="" /></SwiperSlide>
-                <SwiperSlide><img src="https://cdn.shopify.com/s/files/1/0413/6385/products/a-furst-france-eternity-band-ring-peridot-18k-yellow-gold-A2153GO-6_800x.jpg?v=1680888997" alt="" /></SwiperSlide>
-                <SwiperSlide><img src="https://cdn.shopify.com/s/files/1/0413/6385/products/a-furst-france-eternity-band-ring-peridot-18k-yellow-gold-A2153GO-6_3_800x.jpg?v=1680904841" alt="" /></SwiperSlide>
-                </Swiper>
-                <div className="about_product">
-                  <h6>in stocks : 23 </h6>
-                  <h2>A & Furst</h2>
-                  <p>1 Cushion-cut London Blue Topaz 13x10 mm weight 7.06 carats.</p>
-                  <h3>Price : $653. 39</h3>
-                </div>
-              </li>
+                  <li>
+                    <Swiper
+                      spaceBetween={30}
+                      centeredSlides={true}
+                      autoplay={{
+                        delay: 2500,
+                        disableOnInteraction: false,
+                      }}
+                      pagination={{
+                        clickable: true,
+                      }}
+                      navigation={true}
+                      modules={[Autoplay, Pagination, Navigation]}
+                      className="mySwiper"
+                    >
+                      {
+                        e.image.map((t)=>(
+                          <SwiperSlide id={t.image_id}><img src={t.image_url} alt="" /></SwiperSlide>
+                        ))
+                      }
+                    </Swiper>
+                    <div className="about_product">
+                      <h6>in stocks : {e.stock}</h6>
+                      <h2>{e.list_name}</h2>
+                      <p>{e.list_text}</p>
+                      <h3>Price : ${e.price}</h3>
+                    </div>
+                  </li>
+                ))
+              }
             </ul>
           </div>
         </div>

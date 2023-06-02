@@ -13,7 +13,7 @@ function Header() {
   ]
 
   const [scrol, setScrol] = React.useState(false)
-  const offSet = 80;
+  const offSet = 100;
   const getTop = () => window.pageYOffset || document.documentElement.scrollTop;
 
   window.addEventListener('scroll', () => {
@@ -32,7 +32,7 @@ function Header() {
   console.log(local);
 
   return (
-    <div className={scrol ? 'active header__sass' : 'header__sass'}>
+    <div className={scrol ? 'active' : 'header__sass'}>
       <div className="container">
         <div className="header__inner">
           <h1>𝐴𝑖𝑠ℎ𝑒 & 𝑆𝑎𝑓𝑖𝑦𝑒𝑚</h1>
