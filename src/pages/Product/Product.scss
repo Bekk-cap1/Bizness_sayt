@@ -7,35 +7,92 @@
         margin: 0 auto;
         padding: 0;
         &__inner{
-            .cat{
-                padding-left: 0;
-                width: 70%;
-                display: flex;
-                list-style-type: none;
-                justify-content: space-between;
-                margin-top: 30px;
-                transition: 0.3s ease-in-out;
-                li{
-                    text-transform: capitalize;
-                    color: rgb(255, 0, 255);
-                    font-weight: 900;
-                    font-size: 22px;
-                    padding: 0 20px;
-                    cursor: pointer;
+            header{
+
+                .cat{
+                    padding-left: 0;
+                    width: 70%;
+                    display: flex;
+                    list-style-type: none;
+                    justify-content: space-between;
+                    margin-top: 30px;
+                    transition: 0.3s ease-in-out;
+                    li{
+                        text-transform: capitalize;
+                        color: rgb(255, 0, 255);
+                        font-weight: 900;
+                        font-size: 22px;
+                        padding: 0 20px;
+                        cursor: pointer;
+                    }
+                    .btn__categ__active{
+                        border-bottom: 2px solid rgb(255, 0, 255);
+                    }
                 }
-                .btn__categ__active{
-                    border-bottom: 2px solid rgb(255, 0, 255);
+                .categoriy{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    width: 100%;
+                    list-style-type: none;
+                    padding-left: 0;
+                    .cat_item{
+                        box-shadow: 2px 6px 26px rgb(184, 178, 184);
+                        border-radius: 25px;
+                        position: relative;
+                        cursor: pointer;
+                        transition: .2s ease-in-out;
+                        img{
+                            border-radius: 25px;
+                        }
+                        h5{
+                            position: absolute;
+                            color: rgb(255, 0, 255);
+                            font-size: 18px;
+                            text-transform: capitalize;
+                            margin: 0;
+                            bottom: 15px;
+                            left: 30px;
+                        }
+                    }
+                    .cat_item_active{
+                        transform: scale(.9);
+                    }
+                }
+            }
+            main{
+                .product__search{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin: 50px 0 0;
+                    div{
+                        &:nth-child(1){
+                            input{
+                                border: none;
+                                font-size: 22px;
+                                padding-left: 10px;
+                                padding-bottom: 10px;
+                                border-bottom: 1px solid #000;
+                                width: 220px;
+                                outline: none;
+                            }
+                        }
+                        &:nth-child(2){
+                            h4{
+                                font-size: 22px;
+                                select{
+                                    outline: none;
+                                    border: none;
+                                    font-size: 22px;
+                                    text-align: start;
+                                    width: 120px;
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }
     }
-}
-
-.categoriy{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    list-style-type: none;
-    padding-left: 0;
 }

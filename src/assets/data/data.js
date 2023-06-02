@@ -102,3 +102,26 @@ export const dataSearch = [
         name: 'Поиск...'
     }
 ]
+
+export const catItem = [
+    {
+        id: 1,
+        image_url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBWJMVMYd_du-p26BRRARjZOwSNqV4lFt2Sg&usqp=CAU',
+        title: 'kulon'
+    },
+    {
+        id: 2,
+        image_url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXnXyL_fhYpNBaGVPVdAPBOFr6sV1bFUluMw&usqp=CAU',
+        title: 'uzuk'
+    },
+    {
+        id: 3,
+        image_url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROKl98dqjybv_sumZ3xRBATbViisxXEnDf3g&usqp=CAU',
+        title: 'braslet'
+    },
+    {
+        id: 4,
+        image_url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDKwxp1ff_Cb-JVve8oCjp1UxfVLJqe3E9V-f2DIl7l5P8wIX6JfylPraAyOr_PoC0rrw&usqp=CAU',
+        title: 'complect'
+    },
+]
