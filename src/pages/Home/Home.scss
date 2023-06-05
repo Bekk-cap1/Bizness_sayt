@@ -10,12 +10,21 @@
 
         &__inner {
             margin: 0 auto;
-            width: 90%;
+            width: 100%;
             margin-top: 50px;
+
             .swiper {
                 border-radius: 25px;
+                height: 600px;
                 width: 100%;
-                height: 100%;
+                // height: 100%;
+            }
+
+            .swiper-button-next,
+            .swiper-button-prev {
+                &::after {
+                    display: none;
+                }
             }
 
             .swiper-slide {
