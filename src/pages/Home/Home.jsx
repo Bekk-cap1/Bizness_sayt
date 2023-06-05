@@ -4,7 +4,7 @@ import './Home.scss'
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import Logo from '../../assets/image/logo.png'
+// import Logo from '../../assets/image/logo.png'
 
 
 // import required modules

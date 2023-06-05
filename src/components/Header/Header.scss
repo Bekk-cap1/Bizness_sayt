@@ -102,23 +102,14 @@
     animation: city 10s linear infinite;
     -webkit-animation: city 10s linear infinite;
 
+    // background: rgb(255, 0, 255);
     @keyframes city {
         from {
-            background-position: -1000px 100%, 0 0;
+            background-position:  0%, 0 0;
         }
 
         to {
-            background-position: 1000px 100%, 0 0;
-        }
-    }
-
-    @-webkit-keyframes city {
-        from {
-            background-position: -1000px 100%, 0 0;
-        }
-
-        to {
-            background-position: 0 100%, 0 0;
+            background-position: 100%, 0 0;
         }
     }
 
