@@ -10,33 +10,37 @@ import './Product.scss'
 
 const listArr = []
 const listArr2 = []
+const listPagenation = []
 
 function Product() {
 
   catItem?.map((e) => {
-    if (listArr.find((ietm)=> ietm.title == e.title)) {
-      console.log(null);
-    }else{
+    if (listArr.find((item) => item.title == e.title)) {
+      console.log('');
+    } else {
       listArr.push(e)
     }
   })
 
-  // catItem?.map((e) => {
-  //   if (!listArr.includes(e.id)) {
-  //     listArr.push(e.id)
-
-  //   }
-  // })
   const [listArrr2, setListArr2] = useState(listArr2[0])
-
   const [pagination, setPagination] = useState(1)
 
-  listData.map((e, i)=>{
-    const mat =  Math.floor((i) / 10)
-    console.log(mat);
+  const listProduct = []
+  console.log();
+  listProduct.push(listData.slice(pagination * 12 - 12, pagination * 12))
+  console.log(listProduct);
+
+  listData.map((e, i) => {
+    const mat = Math.floor(((i) / 12) + 1)
+    if (listPagenation.find((item) => item == mat)) {
+      console.log('');
+    } else {
+      listPagenation.push(mat)
+      console.log(listPagenation);
+    }
   })
 
-  const [count, setCount] = useState()
+
 
   return (
     <div className='product'>
@@ -60,7 +64,7 @@ function Product() {
                   <li className={listArrr2 === e.id ? 'cat_item_active cat_item' : 'cat_item'} onClick={() => setListArr2(e.id)}>
                     <img src={e.image_url} alt="" />
                     <h5>{e.title}</h5>
-                  </li> 
+                  </li>
                 ))
               }
             </ul>
@@ -85,47 +89,47 @@ function Product() {
             <hr />
             <ul>
               {
-                listData?.map((e, i) => (
-                  i + 1 == pagination ?
-                    <li>
-                      <Swiper
-                        spaceBetween={30}
-                        centeredSlides={true}
-                        autoplay={{
-                          delay: 2500,
-                          disableOnInteraction: false,
-                        }}
-                        pagination={{
-                          clickable: true,
-                        }}
-                        navigation={true}
-                        modules={[Autoplay, Pagination, Navigation]}
-                        className="mySwiper"
-                      >
-                        {
-                          e.image.map((t) => (
-                            <SwiperSlide id={t.image_id}><img src={t.image_url} alt="" /></SwiperSlide>
-                          ))
-                        }
-                      </Swiper>
-                      <div className="about_product">
-                        <h6>in stocks : {e.stock}</h6>
-                        <h2>{e.list_name}</h2>
-                        <p>{e.list_text}</p>
-                        <h3>Price : ${e.price}</h3>
-                      </div>
-                    </li>
-                    : ''
+                listProduct[0]?.map((e, i) => (
+                  <li>
+                    <Swiper
+                      spaceBetween={30}
+                      centeredSlides={true}
+                      autoplay={{
+                        delay: 2500,
+                        disableOnInteraction: false,
+                      }}
+                      pagination={{
+                        clickable: true,
+                      }}
+                      navigation={true}
+                      modules={[Autoplay, Pagination, Navigation]}
+                      className="mySwiper"
+                    >
+                      {
+                        e.image.map((t) => (
+                          <SwiperSlide id={t.image_id}><img src={t.image_url} alt="" /></SwiperSlide>
+                        ))
+                      }
+                    </Swiper>
+                    <div className="about_product">
+                      <h6>in stocks : {e.stock}</h6>
+                      <h2>{e.list_name}</h2>
+                      <p>{e.list_text}</p>
+                      <h3>Price : ${e.price}</h3>
+                    </div>
+                  </li>
                 ))
               }
             </ul>
 
-            <div>
-              {
-                listData?.map((e, i) => (
-                  <button onClick={() => setPagination(i + 1)}>{i+1}</button>
-                ))
-              }
+            <div className='div__pagenation'>
+              <ul>
+                {
+                  listPagenation?.map((e, i) => (
+                    <button onClick={() => setPagination(e)}>{e}</button>
+                  ))
+                }
+              </ul>
             </div>
           </main>
         </div>

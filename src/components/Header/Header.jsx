@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { dataPage } from '../../assets/data/data'
 import './Header.scss'
 import User__foto from "../../assets/image/user.png"
@@ -26,10 +26,9 @@ function Header() {
 
   const local = useLocation()
   const navigate = useNavigate()
-  if(local.pathname == '/home'){
+  if (local.pathname == '/home') {
     navigate('/')
   }
-  console.log(local);
 
   return (
     <div className={scrol ? 'active' : 'header__sass'}>

@@ -20,6 +20,12 @@ function Home() {
     progressCircle.current.style.setProperty('--progress', 1 - progress);
     progressContent.current.textContent = `${Math.ceil(time / 1000)}s`;
   };
+
+
+  const listHome = []
+  listHome.push(listData.slice(-10, -1))
+  console.log(listHome);
+
   return (
     <div className='home'>
       <div className="home__container">
@@ -62,7 +68,7 @@ function Home() {
             <hr />
             <ul>
               {
-                listData?.map((e) => (
+                listHome[0]?.map((e) => (
 
                   <li>
                     <Swiper

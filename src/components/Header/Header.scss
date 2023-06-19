@@ -6,31 +6,31 @@
     top: 0;
     z-index: 999;
     width: 100%;
-    background: linear-gradient(90deg, rgba(255, 0, 254, 1) 0%, rgba(121, 9, 94, 1) 51%, rgba(255, 0, 254, 1) 100%) repeat-x 0 100% fixed, linear-gradient(to top, #5080b1, #004e8c) fixed;
-    animation: city 10s linear infinite;
-    -webkit-animation: city 10s linear infinite;
     background: #d802cf;
+    // background: linear-gradient(90deg, rgba(255, 0, 254, 1) 0%, rgba(121, 9, 94, 1) 51%, rgba(255, 0, 254, 1) 100%) repeat-x 0 100% fixed, linear-gradient(to top, #5080b1, #004e8c) fixed;
+    // animation: city 10s linear infinite;
+    // -webkit-animation: city 10s linear infinite;
     transition: 0.5s ease-in-out;
 
-    @keyframes city {
-        from {
-            background-position: -1000px 100%, 0 0;
-        }
+    // @keyframes city {
+    //     from {
+    //         background-position: -1000px 100%, 0 0;
+    //     }
 
-        to {
-            background-position: 1000px 100%, 0 0;
-        }
-    }
+    //     to {
+    //         background-position: 1000px 100%, 0 0;
+    //     }
+    // }
 
-    @-webkit-keyframes city {
-        from {
-            background-position: -1000px 100%, 0 0;
-        }
+    // @-webkit-keyframes city {
+    //     from {
+    //         background-position: -1000px 100%, 0 0;
+    //     }
 
-        to {
-            background-position: 0 100%, 0 0;
-        }
-    }
+    //     to {
+    //         background-position: 0 100%, 0 0;
+    //     }
+    // }
 
     .container {
         max-width: 1440px;
@@ -97,21 +97,21 @@
 
 .header__sass {
     width: 100%;
-    background: linear-gradient(90deg, rgba(255, 0, 254, 1) 0%, rgba(121, 9, 94, 1) 51%, rgba(255, 0, 254, 1) 100%) repeat-x 0 100% fixed,
-        linear-gradient(to top, #5080b1, #004e8c) fixed;
-    animation: city 10s linear infinite;
-    -webkit-animation: city 10s linear infinite;
+    background: rgb(255, 0, 255);
+    // background: linear-gradient(90deg, rgba(255, 0, 254, 1) 0%, rgba(121, 9, 94, 1) 51%, rgba(255, 0, 254, 1) 100%) repeat-x 0 100% fixed,
+    //     linear-gradient(to top, #5080b1, #004e8c) fixed;
+    // animation: city 10s linear infinite;
+    // -webkit-animation: city 10s linear infinite;
 
-    // background: rgb(255, 0, 255);
-    @keyframes city {
-        from {
-            background-position:  0%, 0 0;
-        }
+    // @keyframes city {
+    //     from {
+    //         background-position:  0%, 0 0;
+    //     }
 
-        to {
-            background-position: 100%, 0 0;
-        }
-    }
+    //     to {
+    //         background-position: 100%, 0 0;
+    //     }
+    // }
 
     .container {
         max-width: 1440px;
