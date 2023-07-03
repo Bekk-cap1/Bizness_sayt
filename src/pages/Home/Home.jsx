@@ -8,8 +8,9 @@ import 'swiper/css/navigation';
 
 
 // import required modules
-import { Autoplay, Pagination, Navigation } from 'swiper';
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import { dataPage, dataSearch, listData } from '../../assets/data/data';
+import { useNavigate } from 'react-router-dom';
 // import { Scrollbar } from "swiper";
 
 function Home() {
@@ -25,6 +26,7 @@ function Home() {
   const listHome = []
   listHome.push(listData.slice(-10, -1))
   console.log(listHome);
+  const navigate = useNavigate()
 
   return (
     <div className='home'>
@@ -70,7 +72,7 @@ function Home() {
               {
                 listHome[0]?.map((e) => (
 
-                  <li>
+                  <li onClick={() => navigate(`/products/${e.id}`)}>
                     <Swiper
                       spaceBetween={30}
                       centeredSlides={true}

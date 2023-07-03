@@ -1,12 +1,14 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { useState } from 'react'
-import { Autoplay, Navigation, Pagination } from 'swiper'
+import { Autoplay, Navigation, Pagination } from 'swiper/modules'
 import { SwiperSlide, Swiper } from 'swiper/react'
 import { catItem, dataSearch, listData } from '../../assets/data/data'
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import './Product.scss'
+import { Context } from '../../assets/Context/Context'
+import { useLocation, useNavigate } from 'react-router-dom'
 
 const listArr = []
 const listArr2 = []
@@ -40,6 +42,17 @@ function Product() {
     }
   })
 
+  const navigate = useNavigate()
+
+  const { catal, setCatal } = useContext(Context)
+  const { page, setPage } = useContext(Context)
+
+  const { number, setNumber } = useContext(Context)
+  const local = useLocation()
+  const mapper = (e) => {
+    setNumber(e.target.id)
+  }
+
 
 
   return (
@@ -48,16 +61,6 @@ function Product() {
         <div className="product__container__inner">
 
           <header>
-
-            {/* <ul className='cat'>
-              {
-                listArr.map((e) => (
-                  <li className={list == e ? 'btn__categ__active' : ''} onClick={() => setList(e)}>
-                    {e}
-                  </li>
-                ))
-              }
-            </ul> */}
             <ul className='categoriy'>
               {
                 listArr?.map((e) => (
@@ -90,7 +93,7 @@ function Product() {
             <ul>
               {
                 listProduct[0]?.map((e, i) => (
-                  <li>
+                  <li onClick={() => navigate(`/products/${e.id}`)}>
                     <Swiper
                       spaceBetween={30}
                       centeredSlides={true}
