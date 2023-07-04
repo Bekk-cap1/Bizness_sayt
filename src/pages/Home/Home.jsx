@@ -28,6 +28,10 @@ function Home() {
   console.log(listHome);
   const navigate = useNavigate()
 
+
+  const lan = window.localStorage.getItem('language')
+
+
   return (
     <div className='home'>
       <div className="home__container">
@@ -61,7 +65,7 @@ function Home() {
             </Swiper>
           </div>
           <div className="search">
-            <input id='inp_search' type="search" placeholder={dataSearch[0].name} />
+            <input id='inp_search' type="search" placeholder={dataSearch[0][`name_${lan}`]} />
             <label htmlFor="inp_search"><i class="bi bi-search"></i></label>
           </div>
 
@@ -94,10 +98,10 @@ function Home() {
                       }
                     </Swiper>
                     <div className="about_product">
-                      <h6>in stocks : {e.stock}</h6>
-                      <h2>{e.list_name}</h2>
-                      <p>{e.list_text}</p>
-                      <h3>Price : ${e.price}</h3>
+                      <h6>{e[`stock_${lan}`]} : {e.stock}</h6>
+                      <h2>{e[`list_name_${lan}`]}</h2>
+                      <p>{e[`list_text_${lan}`]}</p>
+                      <h3>{e[`price_${lan}`]} : {e.price}$</h3>
                     </div>
                   </li>
                 ))

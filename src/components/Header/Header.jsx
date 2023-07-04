@@ -1,8 +1,9 @@
-import React, { useEffect } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { dataPage } from '../../assets/data/data'
 import './Header.scss'
 import User__foto from "../../assets/image/user.png"
 import { Link, useLocation, useNavigate } from 'react-router-dom'
+import { Context } from '../../assets/Context/Context'
 
 function Header() {
   const user__Data = [
@@ -26,9 +27,17 @@ function Header() {
 
   const local = useLocation()
   const navigate = useNavigate()
-  if (local.pathname == '/home') {
+  if (local.pathname == '/Home') {
     navigate('/')
   }
+
+  const { language, setLanguage } = useContext(Context)
+
+  const select_langu = (e) => {
+    setLanguage(e.target.value)
+  }
+  window.localStorage.setItem('language', language ? language : 'ru')
+  const lan = window.localStorage.getItem('language')
 
   return (
     <div className={scrol ? 'active' : 'header__sass'}>
@@ -38,7 +47,7 @@ function Header() {
           <ul>
             {
               dataPage?.map((e) => (
-                <Link to={`/${e.eng}`}><strong>{e.ru}</strong></Link>
+                <Link to={`/${e.en}`}><strong>{e[`${language}`]}</strong></Link>
               ))
             }
           </ul>
@@ -51,9 +60,9 @@ function Header() {
               }
               <img src={User__foto} alt="" />
             </div>
-            <select id="">
-              <option value="ru">Ru</option>
-              <option value="eng">Eng</option>
+            <select id="" onChange={select_langu}>
+              <option value="ru" selected={lan == 'ru' ? true : false}>Ru</option>
+              <option value="en" selected={lan == 'en' ? true : false}>Eng</option>
             </select>
           </div>
         </div>

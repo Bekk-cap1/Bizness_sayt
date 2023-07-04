@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import { useState } from 'react'
 import { Autoplay, Navigation, Pagination } from 'swiper/modules'
 import { SwiperSlide, Swiper } from 'swiper/react'
-import { catItem, dataSearch, listData } from '../../assets/data/data'
+import { catItem, dataSearch, listData, selValue } from '../../assets/data/data'
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
@@ -44,14 +44,7 @@ function Product() {
 
   const navigate = useNavigate()
 
-  const { catal, setCatal } = useContext(Context)
-  const { page, setPage } = useContext(Context)
-
-  const { number, setNumber } = useContext(Context)
-  const local = useLocation()
-  const mapper = (e) => {
-    setNumber(e.target.id)
-  }
+  const lan = window.localStorage.getItem('language')
 
 
 
@@ -76,17 +69,23 @@ function Product() {
           <main>
             <div className='product__search'>
               <div>
-                <input type="text" id='search' placeholder={dataSearch[0].name} />
+                <input type="text" id='search' placeholder={dataSearch[0][`name_${lan}`]} />
                 <label htmlFor="search"></label>
               </div>
               <div>
-                <h4>Сортировка:
-                  <select>
-                    <option >По цене</option>
-                    <option >Дата</option>
-                    <option >По цене 👍</option>
-                  </select>
-                </h4>
+                {
+                  selValue?.map((e) => (
+                    <h4>{e[`name_${lan}`]} : 
+                      <select>
+                        {
+                          e[`list_${lan}`].map((q) => (
+                            <option value={q.turtle}>{q[`title_${lan}`]}</option>
+                          ))
+                        }
+                      </select>
+                    </h4>
+                  ))
+                }
               </div>
             </div>
             <hr />
@@ -115,10 +114,10 @@ function Product() {
                       }
                     </Swiper>
                     <div className="about_product">
-                      <h6>in stocks : {e.stock}</h6>
-                      <h2>{e.list_name}</h2>
-                      <p>{e.list_text}</p>
-                      <h3>Price : ${e.price}</h3>
+                      <h6>{e[`stock_${lan}`]} : {e.stock}</h6>
+                      <h2>{e[`list_name_${lan}`]}</h2>
+                      <p>{e[`list_text_${lan}`]}</p>
+                      <h3>{e[`price_${lan}`]} : {e.price}$</h3>
                     </div>
                   </li>
                 ))

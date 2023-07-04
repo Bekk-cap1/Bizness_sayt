@@ -30,7 +30,6 @@ function App() {
       setCount(e.id)   
     })
   }, [])
-  console.log(count);
 
   return (
     <div className="App">

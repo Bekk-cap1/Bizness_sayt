@@ -41,15 +41,20 @@
                         display: flex;
                         justify-content: space-between;
                         align-items: center;
+                        margin: 0;
                         h6{
                             margin-top: 30px;
                             padding-left: 20px;
                             font-size: 18px;
                             position: relative;
                             color: green;
+                            margin-bottom: 0;
                             &::before{
                                 left: 0px;
                                 position: absolute;
+                            }
+                            strong{
+                                margin: 0;
                             }
                         }
                         h5{

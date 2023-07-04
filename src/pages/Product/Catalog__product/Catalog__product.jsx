@@ -5,7 +5,7 @@ import Header from '../../../components/Header/Header'
 import './Catalog__product.scss'
 import logo from '../../../assets/image/logo.png'
 import { Context } from '../../../assets/Context/Context'
-import { listData } from '../../../assets/data/data'
+import { listData, opisanie } from '../../../assets/data/data'
 import Footer from '../../../components/Footer/Footer'
 
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -45,6 +45,8 @@ function Catalog__product() {
     const navig = local.pathname.split('/products/').join('')
     console.log(url_img);
 
+    const lan = window.localStorage.getItem('language')
+
     return (
         <>
             <div className='header__product'>
@@ -56,34 +58,39 @@ function Catalog__product() {
                                 {
                                     listData?.map((e, i) => (
                                         navig == e.id ?
-                                            <img src={ catal.img || e.image[url_img].image_url} alt="" />
+                                            <img src={e.image[url_img].image_url} alt="" />
                                             : ''
                                     ))
 
                                 }
                             </div>
                             <div className='product__main'>
-                                <h2>Дистиллятор для <br /> получения гидролата 8л</h2>
-                                <span>
-                                    <h6>В наличии</h6>
-                                    <h5>Артикул: <strong>CP-0803</strong></h5>
-                                </span>
-                                <hr />
-                                <h3>Описание</h3>
-                                <p>Медный дистиллятор «Феникс» станет Вашим надёжным помощником и проводником в мир дистилляции и красоты, с которым Вы легко сможете получать свои любимые гидролаты или алкогольные напитки.</p>
-                                <hr />
-                                <span>
-                                    <h2>Цена</h2>
-                                    {
-                                        listData?.map((e, i) => (
-                                            navig == e.id ?
-                                                <>
-                                                    <b>{catal.price * product || e.price * product} $</b>
-                                                    <h4>{catal.price || e.price}$</h4>
-                                                </> : ''
-                                        ))
-                                    }
-                                </span>
+                                {
+                                    listData?.map((e, i) => (
+                                        navig == e.id ?
+                                            <>
+                                                <h2>{e[`list_text_${lan}`]}</h2>
+                                                <span>
+                                                    <h6>{e[`stock_${lan}`]}: <strong>{e.stock}</strong></h6>
+                                                </span>
+                                                <hr />
+                                                {
+                                                    opisanie?.map((q) => (
+                                                        <h3>
+                                                            {q[`name_${lan}`]}
+                                                        </h3>
+                                                    ))
+                                                }
+                                                <p>{e[`product_text_${lan}`]}</p>
+                                                <hr />
+                                                <span>
+                                                    <h2>{e[`price_${lan}`]}:</h2>
+                                                    <b>{((e.price - (e.forsell !== 0 ? e.price * e.forsell / 100 : e.price)) * product).toFixed(1)} $</b>
+                                                    <h4>{(e.forsell !== 0 ? e.price : '') + '$'}</h4>
+                                                </span>
+                                            </> : ''
+                                    ))
+                                }
                                 <div>
                                     <span className='span__div'>
                                         <b onClick={() => setProduct(product - 1)}>-</b>
@@ -115,7 +122,7 @@ function Catalog__product() {
                                                     className="mySwiper"
                                                 >
                                                     {e.image.map((q, i) => (
-                                                        <SwiperSlide onClick={()=>setUrl_img(i)}>
+                                                        <SwiperSlide onClick={() => setUrl_img(i)}>
                                                             <img src={q.image_url} alt="" />
                                                         </SwiperSlide>
                                                     ))}
@@ -130,13 +137,18 @@ function Catalog__product() {
                     </div>
                     <div className='opisaniye'>
                         <div>
-                            <h2>Описание</h2>
-                            <p>Для всех, кто хочет самостоятельно получать гидролат или дистиллят, и быть уверенным в его качестве – у нас есть готовое и удобное решение. Современный дистиллятор «Феникс» станет для Вас отличным помощником. Полностью медный аппарат изготовлен на собственном производстве, на основании многолетнего опыта работы с медными дистилляторами.
-                                <br /><br />
-                                Гораздо практичней, чем алькитара, и ни в чём ей не уступающий. Даже наоборот, имеет ряд преимуществ, таких как толщина металла, надёжные, сварные швы, и деревянные ручки, которые не так нагреваются, как латунные. Соединение ароматизационной колонны с емкостью герметично и долговечно. Радиатор данного аппарата расходует в 3 раза меньше воды для охлаждения, в сравнении с алькитарой такого же объёма.
-                                <br /><br />
-                                Замечательный аппарат прослужит для Вас долгие годы и будет радовать своего владельца гидролатом высокого качества. Оцените все преимущества паровой дистилляции и получайте гидролаты, в натуральности которых Вы можете быть уверенны. Аппарат полностью укомплектован и готов к работе. Объём перегонного куба – 8 литров. Объём колонны – 0,8 литра. Аппарат полностью укомплектован и готов к эксплуатации.
-                            </p>
+                            {
+                                opisanie?.map((e)=>(
+                                    <h2>{e[`name_${lan}`]}</h2>
+                                ))
+                            }
+                            {
+                                listData?.map((e) => (
+                                    navig == e.id ?
+                                        < p > {e[`text_product_${lan}`]}
+                                        </p> : ''
+                                ))
+                            }
                         </div>
                     </div>
                     <hr />

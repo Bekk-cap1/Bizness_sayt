@@ -2,29 +2,104 @@ export const dataPage = [
     {
         id: 1,
         ru: 'Главная',
-        eng: 'home'
+        en: 'Home'
     },
     {
         id: 2,
         ru: 'Продукты',
-        eng: 'products'
+        en: 'Products'
     },
     {
         id: 3,
         ru: 'О нас',
-        eng: 'about'
+        en: 'About'
     },
+]
+
+export const dataSearch = [
+    {
+        id: 1,
+        name_en: 'Search...',
+        name_ru: 'Поиск...'
+
+    }
+]
+
+export const opisanie = [
+    {
+        id: 1,
+        name_en: 'Description',
+        name_ru: 'Описание'
+    }
+]
+export const selValue = [
+    {
+        id: 1,
+        name_ru: "Сортировка",
+        list_ru: [
+            {
+                list_id: 1,
+                title_ru: 'Все',
+            },
+            {
+                list_id: 2, 
+                title_ru: 'По цене ↑'
+            },
+            {
+                list_id: 3, 
+                title_ru: 'По цене ↓'
+            },
+            {
+                list_id: 4, 
+                title_ru: 'Новые'
+            },
+        ],
+        id: 2,
+        name_en: "Sort",
+        list_en: [
+            {
+                list_id: 1,
+                title_en: 'All',
+                turtle: 'all'
+            },
+            {
+                list_id: 2, 
+                title_en: 'By price ↑',
+                turtle: 'ascending'
+            },
+            {
+                list_id: 3, 
+                title_en: 'By price ↓',
+                turtle: 'descending'
+            },
+            {
+                list_id: 4, 
+                title_en: 'New',
+                turtle: 'new'
+            },
+        ]
+    }
 ]
 
 export const listData = [
     {
         id: 1,
         stock: 24,
-        list_name: 'A & Furst',
-        list_text: '1 Cushion-cut London Blue Topaz 13x10 mm weight 7.06 carats.',
+        stock_ru: 'В наличии',
+        stock_en: 'In stock',
+        list_name_en: 'A & Furst',
+        list_name_ru: 'А & Фёрст',
+        list_text_en: '1 Cushion-cut London Blue Topaz 13x10 mm weight 7.06 carats.',
+        list_text_ru: '1 Лондонский голубой топаз огранки «кушон» 13х10 мм, вес 7,06 карата.',
         price: 24,
+        price_ru: 'Цена',
+        price_en: 'Price',
+        forsell: 24,
         category: 'kulon',
-        product_text: 'Abdurasul uyga ketti ozi bilan olib ketdi, u bilan esa Mumtozham ketdi.',
+        product_text_en: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius temporibus dolor dolorum repudiandae fugiat odio, voluptate eligendi cum consequuntur aut? Architecto enim optio cumque a, quibusdam aut quis blanditiis veritatis tenetur, in, vitae libero minima eaque ea quo commodi. Harum.. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius temporibus dolor dolorum repudiandae fugiat odio, voluptate eligendi cum consequuntur aut? Architecto enim optio cumque a, quibusdam aut quis blanditiis veritatis tenetur, in, vitae libero minima eaque ea quo commodi. Harum. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius temporibus dolor dolorum repudiandae fugiat odio, voluptate eligendi cum consequuntur aut? Architecto enim optio cumque a, quibusdam aut quis blanditiis veritatis tenetur, in, vitae libero minima eaque ea quo commodi. Harum.',
+        product_text_ru: 'Обычный текст , неформатированный текст Текстовый файл , тип компьютерного файла, открываемый большинством текстовых программ.Текстовая строка, последовательность символов, управляемая программнобеспечением.Текстовое сообщение, короткое электронное сообщение, предназначенное для общен между пользователями мобильных телефонов. Текст(приложение Chrome), текстовый редактор для веб- браузера Google Chrome.tEXt, вспомогательный фрагмент в формате файла изображения PNG.',
+        text_product_en: 'Choosing a future profession can be a difficult task for a high school student. After leaving school, so many roads open before us that it is sometimes very difficult to decide which one to go. But for me it was different. From an early age, I decided that I wanted to become a teacher. In my family, many were teachers: my grandmother taught students of the CPC how to knit on special machines, my mother taught mathematics at school, and my older sister also graduated from a pedagogical university and now teaches English to children. All my relatives love their work very much and speak respectfully about it. Despite this, they never put pressure on me, allowing me to choose my own path. And I chose. I want to become a teacher, as this profession is close to me in spirit. I really want to share my knowledge with students, not only introducing children to science, but also passing on valuable life experience to them. I believe that I am able to do this. I can teach children kindness and a good attitude towards others. I will help them discover their talents, become organized and self-confident. In the future, I see myself as an elementary school teacher, because this position will allow me to translate all my desires into reality. I know that this job will be loved by me, and every day I will come to school with pleasure. Now I am preparing to enter the same pedagogical university where my sister studied. The competition for my chosen specialty has never been low, so it is very important to pass the exams well.',
+        text_product_ru: 'Выбор будущей профессии может стать нелегкой задачей для старшеклассника. После окончания школы перед нами открывается столько дорог, что принять решение, какой именно из них стоит пойти, порой бывает очень непросто. Но для меня все было иначУже с ранних лет я решила, что хочу стать учителем. В моей семье многие были педагогами: бабушка обучала студентов УПК вязанию на специальных машинах, мама преподавала математику в школе, а старшая сестра также окончила педагогический вуз и теперь занимается с детьми английским языком.Все мои родственники очень любят свою работу и уважительно отзываются о ней. Несмотря на это, они никогда не оказывали на меня давления, позволяя самой выбирать свой дальнейший путь. И я выбрала. Я хочу стать учителем, так как эта профессия близка мне по духу. Мне очень хочется делиться своими знаниями с учениками, не только знакомя детей с наукой, но и передавая им ценный жизненный опыт.Я верю, что способна делать это. Я смогу научить детей добру и хорошему отношению к окружающим. Помогу им раскрыть свои таланты, стать организованными и уверенными в себе.В будущем я вижу себя учителем младших классов, поскольку именно эта должность позволит мне воплотить все мои желания в действительность. Я знаю, что эта работа будет любима мной, и каждый день я буду приходить в школу с удовольствием.Сейчас я готовлюсь к поступлению в тот же педагогический университет, в котором училась моя сестра. Конкурс на выбранную мной специальность никогда не был низким, поэтому очень важно хорошо сдать экзамены.',
         image: [
             {
                 image_id: 1,
@@ -38,11 +113,20 @@ export const listData = [
     {
         id: 2,
         stock: 20,
-        list_name: 'C & Machon',
-        list_text: '1 Cushion-cut London Blue Topaz 13x10 mm weight 7.06 carats.',
+        stock_ru: 'В наличии',
+        stock_en: 'In stock',
+        list_name_en: 'C & Machon',
+        list_name_ru: 'А & Фёрст',
+        list_text_en: '1 Cushion-cut London Blue Topaz 13x10 mm weight 7.06 carats.',
+        list_text_ru: '1 Лондонский голубой топаз огранки «кушон» 13х10 мм, вес 7,06 карата.',
         price: 14,
+        price_ru: 'Цена',
+        price_en: 'Price',
+        forsell: 14,
         category: 'uzuk',
-        product_text: 'Abdurasul uyga ketti ozi bilan olib ketdi, u bilan esa Mumtozham ketdi.',
+        product_text: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius temporibus dolor dolorum repudiandae fugiat odio, voluptate eligendi cum consequuntur aut? Architecto enim optio cumque a, quibusdam aut quis blanditiis veritatis tenetur, in, vitae libero minima eaque ea quo commodi. Harum.. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius temporibus dolor dolorum repudiandae fugiat odio, voluptate eligendi cum consequuntur aut? Architecto enim optio cumque a, quibusdam aut quis blanditiis veritatis tenetur, in, vitae libero minima eaque ea quo commodi. Harum. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius temporibus dolor dolorum repudiandae fugiat odio, voluptate eligendi cum consequuntur aut? Architecto enim optio cumque a, quibusdam aut quis blanditiis veritatis tenetur, in, vitae libero minima eaque ea quo commodi. Harum.',
+        text_product_en: 'Choosing a future profession can be a difficult task for a high school student. After leaving school, so many roads open before us that it is sometimes very difficult to decide which one to go. But for me it was different. From an early age, I decided that I wanted to become a teacher. In my family, many were teachers: my grandmother taught students of the CPC how to knit on special machines, my mother taught mathematics at school, and my older sister also graduated from a pedagogical university and now teaches English to children. All my relatives love their work very much and speak respectfully about it. Despite this, they never put pressure on me, allowing me to choose my own path. And I chose. I want to become a teacher, as this profession is close to me in spirit. I really want to share my knowledge with students, not only introducing children to science, but also passing on valuable life experience to them. I believe that I am able to do this. I can teach children kindness and a good attitude towards others. I will help them discover their talents, become organized and self-confident. In the future, I see myself as an elementary school teacher, because this position will allow me to translate all my desires into reality. I know that this job will be loved by me, and every day I will come to school with pleasure. Now I am preparing to enter the same pedagogical university where my sister studied. The competition for my chosen specialty has never been low, so it is very important to pass the exams well.',
+        text_product_ru: 'Выбор будущей профессии может стать нелегкой задачей для старшеклассника. После окончания школы перед нами открывается столько дорог, что принять решение, какой именно из них стоит пойти, порой бывает очень непросто. Но для меня все было иначУже с ранних лет я решила, что хочу стать учителем. В моей семье многие были педагогами: бабушка обучала студентов УПК вязанию на специальных машинах, мама преподавала математику в школе, а старшая сестра также окончила педагогический вуз и теперь занимается с детьми английским языком.Все мои родственники очень любят свою работу и уважительно отзываются о ней. Несмотря на это, они никогда не оказывали на меня давления, позволяя самой выбирать свой дальнейший путь. И я выбрала. Я хочу стать учителем, так как эта профессия близка мне по духу. Мне очень хочется делиться своими знаниями с учениками, не только знакомя детей с наукой, но и передавая им ценный жизненный опыт.Я верю, что способна делать это. Я смогу научить детей добру и хорошему отношению к окружающим. Помогу им раскрыть свои таланты, стать организованными и уверенными в себе.В будущем я вижу себя учителем младших классов, поскольку именно эта должность позволит мне воплотить все мои желания в действительность. Я знаю, что эта работа будет любима мной, и каждый день я буду приходить в школу с удовольствием.Сейчас я готовлюсь к поступлению в тот же педагогический университет, в котором училась моя сестра. Конкурс на выбранную мной специальность никогда не был низким, поэтому очень важно хорошо сдать экзамены. ',
         image: [
             {
                 image_id: 3,
@@ -56,11 +140,20 @@ export const listData = [
     {
         id: 3,
         stock: 14,
-        list_name: 'B & Doctor',
-        list_text: '1 Cushion-cut London Blue Topaz 13x10 mm weight 7.06 carats.',
-        price: 42,
+        stock_ru: 'В наличии',
+        stock_en: 'In stock',
+        list_name_en: 'B & Doctor',
+        list_name_ru: 'А & Фёрст',
+        list_text_en: '1 Cushion-cut London Blue Topaz 13x10 mm weight 7.06 carats.',
+        list_text_ru: '1 Лондонский голубой топаз огранки «кушон» 13х10 мм, вес 7,06 карата.',
+        price: 40,
+        price_ru: 'Цена',
+        price_en: 'Price',
+        forsell: 42,
         category: 'braslet',
-        product_text: 'Abdurasul uyga ketti ozi bilan olib ketdi, u bilan esa Mumtozham ketdi.',
+        product_text: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius temporibus dolor dolorum repudiandae fugiat odio, voluptate eligendi cum consequuntur aut? Architecto enim optio cumque a, quibusdam aut quis blanditiis veritatis tenetur, in, vitae libero minima eaque ea quo commodi. Harum.. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius temporibus dolor dolorum repudiandae fugiat odio, voluptate eligendi cum consequuntur aut? Architecto enim optio cumque a, quibusdam aut quis blanditiis veritatis tenetur, in, vitae libero minima eaque ea quo commodi. Harum. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius temporibus dolor dolorum repudiandae fugiat odio, voluptate eligendi cum consequuntur aut? Architecto enim optio cumque a, quibusdam aut quis blanditiis veritatis tenetur, in, vitae libero minima eaque ea quo commodi. Harum.',
+        text_product_en: 'Choosing a future profession can be a difficult task for a high school student. After leaving school, so many roads open before us that it is sometimes very difficult to decide which one to go. But for me it was different. From an early age, I decided that I wanted to become a teacher. In my family, many were teachers: my grandmother taught students of the CPC how to knit on special machines, my mother taught mathematics at school, and my older sister also graduated from a pedagogical university and now teaches English to children. All my relatives love their work very much and speak respectfully about it. Despite this, they never put pressure on me, allowing me to choose my own path. And I chose. I want to become a teacher, as this profession is close to me in spirit. I really want to share my knowledge with students, not only introducing children to science, but also passing on valuable life experience to them. I believe that I am able to do this. I can teach children kindness and a good attitude towards others. I will help them discover their talents, become organized and self-confident. In the future, I see myself as an elementary school teacher, because this position will allow me to translate all my desires into reality. I know that this job will be loved by me, and every day I will come to school with pleasure. Now I am preparing to enter the same pedagogical university where my sister studied. The competition for my chosen specialty has never been low, so it is very important to pass the exams well.',
+        text_product_ru: 'Выбор будущей профессии может стать нелегкой задачей для старшеклассника. После окончания школы перед нами открывается столько дорог, что принять решение, какой именно из них стоит пойти, порой бывает очень непросто. Но для меня все было иначУже с ранних лет я решила, что хочу стать учителем. В моей семье многие были педагогами: бабушка обучала студентов УПК вязанию на специальных машинах, мама преподавала математику в школе, а старшая сестра также окончила педагогический вуз и теперь занимается с детьми английским языком.Все мои родственники очень любят свою работу и уважительно отзываются о ней. Несмотря на это, они никогда не оказывали на меня давления, позволяя самой выбирать свой дальнейший путь. И я выбрала. Я хочу стать учителем, так как эта профессия близка мне по духу. Мне очень хочется делиться своими знаниями с учениками, не только знакомя детей с наукой, но и передавая им ценный жизненный опыт.Я верю, что способна делать это. Я смогу научить детей добру и хорошему отношению к окружающим. Помогу им раскрыть свои таланты, стать организованными и уверенными в себе.В будущем я вижу себя учителем младших классов, поскольку именно эта должность позволит мне воплотить все мои желания в действительность. Я знаю, что эта работа будет любима мной, и каждый день я буду приходить в школу с удовольствием.Сейчас я готовлюсь к поступлению в тот же педагогический университет, в котором училась моя сестра. Конкурс на выбранную мной специальность никогда не был низким, поэтому очень важно хорошо сдать экзамены. ',
         image: [
             {
                 image_id: 5,
@@ -74,11 +167,20 @@ export const listData = [
     {
         id: 4,
         stock: 24,
-        list_name: 'D & Addd',
-        list_text: '1 Cushion-cut London Blue Topaz 13x10 mm weight 7.06 carats.',
+        stock_ru: 'В наличии',
+        stock_en: 'In stock',
+        list_name_en: 'D & Addd',
+        list_name_ru: 'А & Фёрст',
+        list_text_en: '1 Cushion-cut London Blue Topaz 13x10 mm weight 7.06 carats.',
+        list_text_ru: '1 Лондонский голубой топаз огранки «кушон» 13х10 мм, вес 7,06 карата.',
         price: 12,
+        price_ru: 'Цена',
+        price_en: 'Price',
+        forsell: 24,
         category: 'kulon',
-        product_text: 'Abdurasul uyga ketti ozi bilan olib ketdi, u bilan esa Mumtozham ketdi.',
+        product_text: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius temporibus dolor dolorum repudiandae fugiat odio, voluptate eligendi cum consequuntur aut? Architecto enim optio cumque a, quibusdam aut quis blanditiis veritatis tenetur, in, vitae libero minima eaque ea quo commodi. Harum.. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius temporibus dolor dolorum repudiandae fugiat odio, voluptate eligendi cum consequuntur aut? Architecto enim optio cumque a, quibusdam aut quis blanditiis veritatis tenetur, in, vitae libero minima eaque ea quo commodi. Harum. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius temporibus dolor dolorum repudiandae fugiat odio, voluptate eligendi cum consequuntur aut? Architecto enim optio cumque a, quibusdam aut quis blanditiis veritatis tenetur, in, vitae libero minima eaque ea quo commodi. Harum.',
+        text_product_en: 'Choosing a future profession can be a difficult task for a high school student. After leaving school, so many roads open before us that it is sometimes very difficult to decide which one to go. But for me it was different. From an early age, I decided that I wanted to become a teacher. In my family, many were teachers: my grandmother taught students of the CPC how to knit on special machines, my mother taught mathematics at school, and my older sister also graduated from a pedagogical university and now teaches English to children. All my relatives love their work very much and speak respectfully about it. Despite this, they never put pressure on me, allowing me to choose my own path. And I chose. I want to become a teacher, as this profession is close to me in spirit. I really want to share my knowledge with students, not only introducing children to science, but also passing on valuable life experience to them. I believe that I am able to do this. I can teach children kindness and a good attitude towards others. I will help them discover their talents, become organized and self-confident. In the future, I see myself as an elementary school teacher, because this position will allow me to translate all my desires into reality. I know that this job will be loved by me, and every day I will come to school with pleasure. Now I am preparing to enter the same pedagogical university where my sister studied. The competition for my chosen specialty has never been low, so it is very important to pass the exams well.',
+        text_product_ru: 'Выбор будущей профессии может стать нелегкой задачей для старшеклассника. После окончания школы перед нами открывается столько дорог, что принять решение, какой именно из них стоит пойти, порой бывает очень непросто. Но для меня все было иначУже с ранних лет я решила, что хочу стать учителем. В моей семье многие были педагогами: бабушка обучала студентов УПК вязанию на специальных машинах, мама преподавала математику в школе, а старшая сестра также окончила педагогический вуз и теперь занимается с детьми английским языком.Все мои родственники очень любят свою работу и уважительно отзываются о ней. Несмотря на это, они никогда не оказывали на меня давления, позволяя самой выбирать свой дальнейший путь. И я выбрала. Я хочу стать учителем, так как эта профессия близка мне по духу. Мне очень хочется делиться своими знаниями с учениками, не только знакомя детей с наукой, но и передавая им ценный жизненный опыт.Я верю, что способна делать это. Я смогу научить детей добру и хорошему отношению к окружающим. Помогу им раскрыть свои таланты, стать организованными и уверенными в себе.В будущем я вижу себя учителем младших классов, поскольку именно эта должность позволит мне воплотить все мои желания в действительность. Я знаю, что эта работа будет любима мной, и каждый день я буду приходить в школу с удовольствием.Сейчас я готовлюсь к поступлению в тот же педагогический университет, в котором училась моя сестра. Конкурс на выбранную мной специальность никогда не был низким, поэтому очень важно хорошо сдать экзамены. ',
         image: [
             {
                 image_id: 7,
@@ -92,11 +194,20 @@ export const listData = [
     {
         id: 5,
         stock: 15,
-        list_name: 'D & Addd',
-        list_text: '1 Cushion-cut London Blue Topaz 13x10 mm weight 7.06 carats.',
+        stock_ru: 'В наличии',
+        stock_en: 'In stock',
+        list_name_en: 'D & Addd',
+        list_name_ru: 'А & Фёрст',
+        list_text_en: '1 Cushion-cut London Blue Topaz 13x10 mm weight 7.06 carats.',
+        list_text_ru: '1 Лондонский голубой топаз огранки «кушон» 13х10 мм, вес 7,06 карата.',
         price: 32,
+        price_ru: 'Цена',
+        price_en: 'Price',
+        forsell: 44,
         category: 'kulon',
-        product_text: 'Abdurasul uyga ketti ozi bilan olib ketdi, u bilan esa Mumtozham ketdi.',
+        product_text: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius temporibus dolor dolorum repudiandae fugiat odio, voluptate eligendi cum consequuntur aut? Architecto enim optio cumque a, quibusdam aut quis blanditiis veritatis tenetur, in, vitae libero minima eaque ea quo commodi. Harum.. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius temporibus dolor dolorum repudiandae fugiat odio, voluptate eligendi cum consequuntur aut? Architecto enim optio cumque a, quibusdam aut quis blanditiis veritatis tenetur, in, vitae libero minima eaque ea quo commodi. Harum. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius temporibus dolor dolorum repudiandae fugiat odio, voluptate eligendi cum consequuntur aut? Architecto enim optio cumque a, quibusdam aut quis blanditiis veritatis tenetur, in, vitae libero minima eaque ea quo commodi. Harum.',
+        text_product_en: 'Choosing a future profession can be a difficult task for a high school student. After leaving school, so many roads open before us that it is sometimes very difficult to decide which one to go. But for me it was different. From an early age, I decided that I wanted to become a teacher. In my family, many were teachers: my grandmother taught students of the CPC how to knit on special machines, my mother taught mathematics at school, and my older sister also graduated from a pedagogical university and now teaches English to children. All my relatives love their work very much and speak respectfully about it. Despite this, they never put pressure on me, allowing me to choose my own path. And I chose. I want to become a teacher, as this profession is close to me in spirit. I really want to share my knowledge with students, not only introducing children to science, but also passing on valuable life experience to them. I believe that I am able to do this. I can teach children kindness and a good attitude towards others. I will help them discover their talents, become organized and self-confident. In the future, I see myself as an elementary school teacher, because this position will allow me to translate all my desires into reality. I know that this job will be loved by me, and every day I will come to school with pleasure. Now I am preparing to enter the same pedagogical university where my sister studied. The competition for my chosen specialty has never been low, so it is very important to pass the exams well.',
+        text_product_ru: 'Выбор будущей профессии может стать нелегкой задачей для старшеклассника. После окончания школы перед нами открывается столько дорог, что принять решение, какой именно из них стоит пойти, порой бывает очень непросто. Но для меня все было иначУже с ранних лет я решила, что хочу стать учителем. В моей семье многие были педагогами: бабушка обучала студентов УПК вязанию на специальных машинах, мама преподавала математику в школе, а старшая сестра также окончила педагогический вуз и теперь занимается с детьми английским языком.Все мои родственники очень любят свою работу и уважительно отзываются о ней. Несмотря на это, они никогда не оказывали на меня давления, позволяя самой выбирать свой дальнейший путь. И я выбрала. Я хочу стать учителем, так как эта профессия близка мне по духу. Мне очень хочется делиться своими знаниями с учениками, не только знакомя детей с наукой, но и передавая им ценный жизненный опыт.Я верю, что способна делать это. Я смогу научить детей добру и хорошему отношению к окружающим. Помогу им раскрыть свои таланты, стать организованными и уверенными в себе.В будущем я вижу себя учителем младших классов, поскольку именно эта должность позволит мне воплотить все мои желания в действительность. Я знаю, что эта работа будет любима мной, и каждый день я буду приходить в школу с удовольствием.Сейчас я готовлюсь к поступлению в тот же педагогический университет, в котором училась моя сестра. Конкурс на выбранную мной специальность никогда не был низким, поэтому очень важно хорошо сдать экзамены. ',
         image: [
             {
                 image_id: 9,
@@ -110,11 +221,20 @@ export const listData = [
     {
         id: 6,
         stock: 10,
-        list_name: 'D & Addd',
-        list_text: '1 Cushion-cut London Blue Topaz 13x10 mm weight 7.06 carats.',
+        stock_ru: 'В наличии',
+        stock_en: 'In stock',
+        list_name_en: 'D & Addd',
+        list_name_ru: 'А & Фёрст',
+        list_text_en: '1 Cushion-cut London Blue Topaz 13x10 mm weight 7.06 carats.',
+        list_text_ru: '1 Лондонский голубой топаз огранки «кушон» 13х10 мм, вес 7,06 карата.',
         price: 18,
+        price_ru: 'Цена',
+        price_en: 'Price',
+        forsell: 0,
         category: 'braslet',
-        product_text: 'Abdurasul uyga ketti ozi bilan olib ketdi, u bilan esa Mumtozham ketdi.',
+        product_text: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius temporibus dolor dolorum repudiandae fugiat odio, voluptate eligendi cum consequuntur aut? Architecto enim optio cumque a, quibusdam aut quis blanditiis veritatis tenetur, in, vitae libero minima eaque ea quo commodi. Harum.. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius temporibus dolor dolorum repudiandae fugiat odio, voluptate eligendi cum consequuntur aut? Architecto enim optio cumque a, quibusdam aut quis blanditiis veritatis tenetur, in, vitae libero minima eaque ea quo commodi. Harum. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius temporibus dolor dolorum repudiandae fugiat odio, voluptate eligendi cum consequuntur aut? Architecto enim optio cumque a, quibusdam aut quis blanditiis veritatis tenetur, in, vitae libero minima eaque ea quo commodi. Harum.',
+        text_product_en: 'Choosing a future profession can be a difficult task for a high school student. After leaving school, so many roads open before us that it is sometimes very difficult to decide which one to go. But for me it was different. From an early age, I decided that I wanted to become a teacher. In my family, many were teachers: my grandmother taught students of the CPC how to knit on special machines, my mother taught mathematics at school, and my older sister also graduated from a pedagogical university and now teaches English to children. All my relatives love their work very much and speak respectfully about it. Despite this, they never put pressure on me, allowing me to choose my own path. And I chose. I want to become a teacher, as this profession is close to me in spirit. I really want to share my knowledge with students, not only introducing children to science, but also passing on valuable life experience to them. I believe that I am able to do this. I can teach children kindness and a good attitude towards others. I will help them discover their talents, become organized and self-confident. In the future, I see myself as an elementary school teacher, because this position will allow me to translate all my desires into reality. I know that this job will be loved by me, and every day I will come to school with pleasure. Now I am preparing to enter the same pedagogical university where my sister studied. The competition for my chosen specialty has never been low, so it is very important to pass the exams well.',
+        text_product_ru: 'Выбор будущей профессии может стать нелегкой задачей для старшеклассника. После окончания школы перед нами открывается столько дорог, что принять решение, какой именно из них стоит пойти, порой бывает очень непросто. Но для меня все было иначУже с ранних лет я решила, что хочу стать учителем. В моей семье многие были педагогами: бабушка обучала студентов УПК вязанию на специальных машинах, мама преподавала математику в школе, а старшая сестра также окончила педагогический вуз и теперь занимается с детьми английским языком.Все мои родственники очень любят свою работу и уважительно отзываются о ней. Несмотря на это, они никогда не оказывали на меня давления, позволяя самой выбирать свой дальнейший путь. И я выбрала. Я хочу стать учителем, так как эта профессия близка мне по духу. Мне очень хочется делиться своими знаниями с учениками, не только знакомя детей с наукой, но и передавая им ценный жизненный опыт.Я верю, что способна делать это. Я смогу научить детей добру и хорошему отношению к окружающим. Помогу им раскрыть свои таланты, стать организованными и уверенными в себе.В будущем я вижу себя учителем младших классов, поскольку именно эта должность позволит мне воплотить все мои желания в действительность. Я знаю, что эта работа будет любима мной, и каждый день я буду приходить в школу с удовольствием.Сейчас я готовлюсь к поступлению в тот же педагогический университет, в котором училась моя сестра. Конкурс на выбранную мной специальность никогда не был низким, поэтому очень важно хорошо сдать экзамены. ',
         image: [
             {
                 image_id: 11,
@@ -128,11 +248,20 @@ export const listData = [
     {
         id: 7,
         stock: 28,
-        list_name: 'D & Addd',
-        list_text: '1 Cushion-cut London Blue Topaz 13x10 mm weight 7.06 carats.',
+        stock_ru: 'В наличии',
+        stock_en: 'In stock',
+        list_name_en: 'D & Addd',
+        list_name_ru: 'А & Фёрст',
+        list_text_en: '1 Cushion-cut London Blue Topaz 13x10 mm weight 7.06 carats.',
+        list_text_ru: '1 Лондонский голубой топаз огранки «кушон» 13х10 мм, вес 7,06 карата.',
         price: 22,
+        price_ru: 'Цена',
+        price_en: 'Price',
+        forsell: 0,
         category: 'uzuk',
-        product_text: 'Abdurasul uyga ketti ozi bilan olib ketdi, u bilan esa Mumtozham ketdi.',
+        product_text: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius temporibus dolor dolorum repudiandae fugiat odio, voluptate eligendi cum consequuntur aut? Architecto enim optio cumque a, quibusdam aut quis blanditiis veritatis tenetur, in, vitae libero minima eaque ea quo commodi. Harum.. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius temporibus dolor dolorum repudiandae fugiat odio, voluptate eligendi cum consequuntur aut? Architecto enim optio cumque a, quibusdam aut quis blanditiis veritatis tenetur, in, vitae libero minima eaque ea quo commodi. Harum. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius temporibus dolor dolorum repudiandae fugiat odio, voluptate eligendi cum consequuntur aut? Architecto enim optio cumque a, quibusdam aut quis blanditiis veritatis tenetur, in, vitae libero minima eaque ea quo commodi. Harum.',
+        text_product_en: 'Choosing a future profession can be a difficult task for a high school student. After leaving school, so many roads open before us that it is sometimes very difficult to decide which one to go. But for me it was different. From an early age, I decided that I wanted to become a teacher. In my family, many were teachers: my grandmother taught students of the CPC how to knit on special machines, my mother taught mathematics at school, and my older sister also graduated from a pedagogical university and now teaches English to children. All my relatives love their work very much and speak respectfully about it. Despite this, they never put pressure on me, allowing me to choose my own path. And I chose. I want to become a teacher, as this profession is close to me in spirit. I really want to share my knowledge with students, not only introducing children to science, but also passing on valuable life experience to them. I believe that I am able to do this. I can teach children kindness and a good attitude towards others. I will help them discover their talents, become organized and self-confident. In the future, I see myself as an elementary school teacher, because this position will allow me to translate all my desires into reality. I know that this job will be loved by me, and every day I will come to school with pleasure. Now I am preparing to enter the same pedagogical university where my sister studied. The competition for my chosen specialty has never been low, so it is very important to pass the exams well.',
+        text_product_ru: 'Выбор будущей профессии может стать нелегкой задачей для старшеклассника. После окончания школы перед нами открывается столько дорог, что принять решение, какой именно из них стоит пойти, порой бывает очень непросто. Но для меня все было иначУже с ранних лет я решила, что хочу стать учителем. В моей семье многие были педагогами: бабушка обучала студентов УПК вязанию на специальных машинах, мама преподавала математику в школе, а старшая сестра также окончила педагогический вуз и теперь занимается с детьми английским языком.Все мои родственники очень любят свою работу и уважительно отзываются о ней. Несмотря на это, они никогда не оказывали на меня давления, позволяя самой выбирать свой дальнейший путь. И я выбрала. Я хочу стать учителем, так как эта профессия близка мне по духу. Мне очень хочется делиться своими знаниями с учениками, не только знакомя детей с наукой, но и передавая им ценный жизненный опыт.Я верю, что способна делать это. Я смогу научить детей добру и хорошему отношению к окружающим. Помогу им раскрыть свои таланты, стать организованными и уверенными в себе.В будущем я вижу себя учителем младших классов, поскольку именно эта должность позволит мне воплотить все мои желания в действительность. Я знаю, что эта работа будет любима мной, и каждый день я буду приходить в школу с удовольствием.Сейчас я готовлюсь к поступлению в тот же педагогический университет, в котором училась моя сестра. Конкурс на выбранную мной специальность никогда не был низким, поэтому очень важно хорошо сдать экзамены. ',
         image: [
             {
                 image_id: 13,
@@ -146,11 +275,20 @@ export const listData = [
     {
         id: 8,
         stock: 27,
-        list_name: 'D & Addd',
-        list_text: '1 Cushion-cut London Blue Topaz 13x10 mm weight 7.06 carats.',
+        stock_ru: 'В наличии',
+        stock_en: 'In stock',
+        list_name_en: 'D & Addd',
+        list_name_ru: 'А & Фёрст',
+        list_text_en: '1 Cushion-cut London Blue Topaz 13x10 mm weight 7.06 carats.',
+        list_text_ru: '1 Лондонский голубой топаз огранки «кушон» 13х10 мм, вес 7,06 карата.',
         price: 24,
+        price_ru: 'Цена',
+        price_en: 'Price',
+        forsell: 0,
         category: 'kulon',
-        product_text: 'Abdurasul uyga ketti ozi bilan olib ketdi, u bilan esa Mumtozham ketdi.',
+        product_text: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius temporibus dolor dolorum repudiandae fugiat odio, voluptate eligendi cum consequuntur aut? Architecto enim optio cumque a, quibusdam aut quis blanditiis veritatis tenetur, in, vitae libero minima eaque ea quo commodi. Harum.. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius temporibus dolor dolorum repudiandae fugiat odio, voluptate eligendi cum consequuntur aut? Architecto enim optio cumque a, quibusdam aut quis blanditiis veritatis tenetur, in, vitae libero minima eaque ea quo commodi. Harum. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius temporibus dolor dolorum repudiandae fugiat odio, voluptate eligendi cum consequuntur aut? Architecto enim optio cumque a, quibusdam aut quis blanditiis veritatis tenetur, in, vitae libero minima eaque ea quo commodi. Harum.',
+        text_product_en: 'Choosing a future profession can be a difficult task for a high school student. After leaving school, so many roads open before us that it is sometimes very difficult to decide which one to go. But for me it was different. From an early age, I decided that I wanted to become a teacher. In my family, many were teachers: my grandmother taught students of the CPC how to knit on special machines, my mother taught mathematics at school, and my older sister also graduated from a pedagogical university and now teaches English to children. All my relatives love their work very much and speak respectfully about it. Despite this, they never put pressure on me, allowing me to choose my own path. And I chose. I want to become a teacher, as this profession is close to me in spirit. I really want to share my knowledge with students, not only introducing children to science, but also passing on valuable life experience to them. I believe that I am able to do this. I can teach children kindness and a good attitude towards others. I will help them discover their talents, become organized and self-confident. In the future, I see myself as an elementary school teacher, because this position will allow me to translate all my desires into reality. I know that this job will be loved by me, and every day I will come to school with pleasure. Now I am preparing to enter the same pedagogical university where my sister studied. The competition for my chosen specialty has never been low, so it is very important to pass the exams well.',
+        text_product_ru: 'Выбор будущей профессии может стать нелегкой задачей для старшеклассника. После окончания школы перед нами открывается столько дорог, что принять решение, какой именно из них стоит пойти, порой бывает очень непросто. Но для меня все было иначУже с ранних лет я решила, что хочу стать учителем. В моей семье многие были педагогами: бабушка обучала студентов УПК вязанию на специальных машинах, мама преподавала математику в школе, а старшая сестра также окончила педагогический вуз и теперь занимается с детьми английским языком.Все мои родственники очень любят свою работу и уважительно отзываются о ней. Несмотря на это, они никогда не оказывали на меня давления, позволяя самой выбирать свой дальнейший путь. И я выбрала. Я хочу стать учителем, так как эта профессия близка мне по духу. Мне очень хочется делиться своими знаниями с учениками, не только знакомя детей с наукой, но и передавая им ценный жизненный опыт.Я верю, что способна делать это. Я смогу научить детей добру и хорошему отношению к окружающим. Помогу им раскрыть свои таланты, стать организованными и уверенными в себе.В будущем я вижу себя учителем младших классов, поскольку именно эта должность позволит мне воплотить все мои желания в действительность. Я знаю, что эта работа будет любима мной, и каждый день я буду приходить в школу с удовольствием.Сейчас я готовлюсь к поступлению в тот же педагогический университет, в котором училась моя сестра. Конкурс на выбранную мной специальность никогда не был низким, поэтому очень важно хорошо сдать экзамены. ',
         image: [
             {
                 image_id: 15,
@@ -164,11 +302,20 @@ export const listData = [
     {
         id: 9,
         stock: 23,
-        list_name: 'D & Addd',
-        list_text: '1 Cushion-cut London Blue Topaz 13x10 mm weight 7.06 carats.',
+        stock_ru: 'В наличии',
+        stock_en: 'In stock',
+        list_name_en: 'D & Addd',
+        list_name_ru: 'А & Фёрст',
+        list_text_en: '1 Cushion-cut London Blue Topaz 13x10 mm weight 7.06 carats.',
+        list_text_ru: '1 Лондонский голубой топаз огранки «кушон» 13х10 мм, вес 7,06 карата.',
         price: 20,
+        price_ru: 'Цена',
+        price_en: 'Price',
+        forsell: 0,
         category: 'braslet',
-        product_text: 'Abdurasul uyga ketti ozi bilan olib ketdi, u bilan esa Mumtozham ketdi.',
+        product_text: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius temporibus dolor dolorum repudiandae fugiat odio, voluptate eligendi cum consequuntur aut? Architecto enim optio cumque a, quibusdam aut quis blanditiis veritatis tenetur, in, vitae libero minima eaque ea quo commodi. Harum.. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius temporibus dolor dolorum repudiandae fugiat odio, voluptate eligendi cum consequuntur aut? Architecto enim optio cumque a, quibusdam aut quis blanditiis veritatis tenetur, in, vitae libero minima eaque ea quo commodi. Harum. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius temporibus dolor dolorum repudiandae fugiat odio, voluptate eligendi cum consequuntur aut? Architecto enim optio cumque a, quibusdam aut quis blanditiis veritatis tenetur, in, vitae libero minima eaque ea quo commodi. Harum.',
+        text_product_en: 'Choosing a future profession can be a difficult task for a high school student. After leaving school, so many roads open before us that it is sometimes very difficult to decide which one to go. But for me it was different. From an early age, I decided that I wanted to become a teacher. In my family, many were teachers: my grandmother taught students of the CPC how to knit on special machines, my mother taught mathematics at school, and my older sister also graduated from a pedagogical university and now teaches English to children. All my relatives love their work very much and speak respectfully about it. Despite this, they never put pressure on me, allowing me to choose my own path. And I chose. I want to become a teacher, as this profession is close to me in spirit. I really want to share my knowledge with students, not only introducing children to science, but also passing on valuable life experience to them. I believe that I am able to do this. I can teach children kindness and a good attitude towards others. I will help them discover their talents, become organized and self-confident. In the future, I see myself as an elementary school teacher, because this position will allow me to translate all my desires into reality. I know that this job will be loved by me, and every day I will come to school with pleasure. Now I am preparing to enter the same pedagogical university where my sister studied. The competition for my chosen specialty has never been low, so it is very important to pass the exams well.',
+        text_product_ru: 'Выбор будущей профессии может стать нелегкой задачей для старшеклассника. После окончания школы перед нами открывается столько дорог, что принять решение, какой именно из них стоит пойти, порой бывает очень непросто. Но для меня все было иначУже с ранних лет я решила, что хочу стать учителем. В моей семье многие были педагогами: бабушка обучала студентов УПК вязанию на специальных машинах, мама преподавала математику в школе, а старшая сестра также окончила педагогический вуз и теперь занимается с детьми английским языком.Все мои родственники очень любят свою работу и уважительно отзываются о ней. Несмотря на это, они никогда не оказывали на меня давления, позволяя самой выбирать свой дальнейший путь. И я выбрала. Я хочу стать учителем, так как эта профессия близка мне по духу. Мне очень хочется делиться своими знаниями с учениками, не только знакомя детей с наукой, но и передавая им ценный жизненный опыт.Я верю, что способна делать это. Я смогу научить детей добру и хорошему отношению к окружающим. Помогу им раскрыть свои таланты, стать организованными и уверенными в себе.В будущем я вижу себя учителем младших классов, поскольку именно эта должность позволит мне воплотить все мои желания в действительность. Я знаю, что эта работа будет любима мной, и каждый день я буду приходить в школу с удовольствием.Сейчас я готовлюсь к поступлению в тот же педагогический университет, в котором училась моя сестра. Конкурс на выбранную мной специальность никогда не был низким, поэтому очень важно хорошо сдать экзамены. ',
         image: [
             {
                 image_id: 17,
@@ -182,11 +329,20 @@ export const listData = [
     {
         id: 10,
         stock: 24,
-        list_name: 'D & Addd',
-        list_text: '1 Cushion-cut London Blue Topaz 13x10 mm weight 7.06 carats.',
+        stock_ru: 'В наличии',
+        stock_en: 'In stock',
+        list_name_en: 'D & Addd',
+        list_name_ru: 'А & Фёрст',
+        list_text_en: '1 Cushion-cut London Blue Topaz 13x10 mm weight 7.06 carats.',
+        list_text_ru: '1 Лондонский голубой топаз огранки «кушон» 13х10 мм, вес 7,06 карата.',
         price: 12,
+        price_ru: 'Цена',
+        price_en: 'Price',
+        forsell: 24,
         category: 'uzuk',
-        product_text: 'Abdurasul uyga ketti ozi bilan olib ketdi, u bilan esa Mumtozham ketdi.',
+        product_text: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius temporibus dolor dolorum repudiandae fugiat odio, voluptate eligendi cum consequuntur aut? Architecto enim optio cumque a, quibusdam aut quis blanditiis veritatis tenetur, in, vitae libero minima eaque ea quo commodi. Harum.. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius temporibus dolor dolorum repudiandae fugiat odio, voluptate eligendi cum consequuntur aut? Architecto enim optio cumque a, quibusdam aut quis blanditiis veritatis tenetur, in, vitae libero minima eaque ea quo commodi. Harum. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius temporibus dolor dolorum repudiandae fugiat odio, voluptate eligendi cum consequuntur aut? Architecto enim optio cumque a, quibusdam aut quis blanditiis veritatis tenetur, in, vitae libero minima eaque ea quo commodi. Harum.',
+        text_product_en: 'Choosing a future profession can be a difficult task for a high school student. After leaving school, so many roads open before us that it is sometimes very difficult to decide which one to go. But for me it was different. From an early age, I decided that I wanted to become a teacher. In my family, many were teachers: my grandmother taught students of the CPC how to knit on special machines, my mother taught mathematics at school, and my older sister also graduated from a pedagogical university and now teaches English to children. All my relatives love their work very much and speak respectfully about it. Despite this, they never put pressure on me, allowing me to choose my own path. And I chose. I want to become a teacher, as this profession is close to me in spirit. I really want to share my knowledge with students, not only introducing children to science, but also passing on valuable life experience to them. I believe that I am able to do this. I can teach children kindness and a good attitude towards others. I will help them discover their talents, become organized and self-confident. In the future, I see myself as an elementary school teacher, because this position will allow me to translate all my desires into reality. I know that this job will be loved by me, and every day I will come to school with pleasure. Now I am preparing to enter the same pedagogical university where my sister studied. The competition for my chosen specialty has never been low, so it is very important to pass the exams well.',
+        text_product_ru: 'Выбор будущей профессии может стать нелегкой задачей для старшеклассника. После окончания школы перед нами открывается столько дорог, что принять решение, какой именно из них стоит пойти, порой бывает очень непросто. Но для меня все было иначУже с ранних лет я решила, что хочу стать учителем. В моей семье многие были педагогами: бабушка обучала студентов УПК вязанию на специальных машинах, мама преподавала математику в школе, а старшая сестра также окончила педагогический вуз и теперь занимается с детьми английским языком.Все мои родственники очень любят свою работу и уважительно отзываются о ней. Несмотря на это, они никогда не оказывали на меня давления, позволяя самой выбирать свой дальнейший путь. И я выбрала. Я хочу стать учителем, так как эта профессия близка мне по духу. Мне очень хочется делиться своими знаниями с учениками, не только знакомя детей с наукой, но и передавая им ценный жизненный опыт.Я верю, что способна делать это. Я смогу научить детей добру и хорошему отношению к окружающим. Помогу им раскрыть свои таланты, стать организованными и уверенными в себе.В будущем я вижу себя учителем младших классов, поскольку именно эта должность позволит мне воплотить все мои желания в действительность. Я знаю, что эта работа будет любима мной, и каждый день я буду приходить в школу с удовольствием.Сейчас я готовлюсь к поступлению в тот же педагогический университет, в котором училась моя сестра. Конкурс на выбранную мной специальность никогда не был низким, поэтому очень важно хорошо сдать экзамены. ',
         image: [
             {
                 image_id: 19,
@@ -200,11 +356,20 @@ export const listData = [
     {
         id: 11,
         stock: 24,
-        list_name: 'D & Addd',
-        list_text: '1 Cushion-cut London Blue Topaz 13x10 mm weight 7.06 carats.',
+        stock_ru: 'В наличии',
+        stock_en: 'In stock',
+        list_name_en: 'D & Addd',
+        list_name_ru: 'А & Фёрст',
+        list_text_en: '1 Cushion-cut London Blue Topaz 13x10 mm weight 7.06 carats.',
+        list_text_ru: '1 Лондонский голубой топаз огранки «кушон» 13х10 мм, вес 7,06 карата.',
         price: 42,
+        price_ru: 'Цена',
+        price_en: 'Price',
+        forsell: 0,
         category: 'kulon',
-        product_text: 'Abdurasul uyga ketti ozi bilan olib ketdi, u bilan esa Mumtozham ketdi.',
+        product_text: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius temporibus dolor dolorum repudiandae fugiat odio, voluptate eligendi cum consequuntur aut? Architecto enim optio cumque a, quibusdam aut quis blanditiis veritatis tenetur, in, vitae libero minima eaque ea quo commodi. Harum.. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius temporibus dolor dolorum repudiandae fugiat odio, voluptate eligendi cum consequuntur aut? Architecto enim optio cumque a, quibusdam aut quis blanditiis veritatis tenetur, in, vitae libero minima eaque ea quo commodi. Harum. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius temporibus dolor dolorum repudiandae fugiat odio, voluptate eligendi cum consequuntur aut? Architecto enim optio cumque a, quibusdam aut quis blanditiis veritatis tenetur, in, vitae libero minima eaque ea quo commodi. Harum.',
+        text_product_en: 'Choosing a future profession can be a difficult task for a high school student. After leaving school, so many roads open before us that it is sometimes very difficult to decide which one to go. But for me it was different. From an early age, I decided that I wanted to become a teacher. In my family, many were teachers: my grandmother taught students of the CPC how to knit on special machines, my mother taught mathematics at school, and my older sister also graduated from a pedagogical university and now teaches English to children. All my relatives love their work very much and speak respectfully about it. Despite this, they never put pressure on me, allowing me to choose my own path. And I chose. I want to become a teacher, as this profession is close to me in spirit. I really want to share my knowledge with students, not only introducing children to science, but also passing on valuable life experience to them. I believe that I am able to do this. I can teach children kindness and a good attitude towards others. I will help them discover their talents, become organized and self-confident. In the future, I see myself as an elementary school teacher, because this position will allow me to translate all my desires into reality. I know that this job will be loved by me, and every day I will come to school with pleasure. Now I am preparing to enter the same pedagogical university where my sister studied. The competition for my chosen specialty has never been low, so it is very important to pass the exams well.',
+        text_product_ru: 'Выбор будущей профессии может стать нелегкой задачей для старшеклассника. После окончания школы перед нами открывается столько дорог, что принять решение, какой именно из них стоит пойти, порой бывает очень непросто. Но для меня все было иначУже с ранних лет я решила, что хочу стать учителем. В моей семье многие были педагогами: бабушка обучала студентов УПК вязанию на специальных машинах, мама преподавала математику в школе, а старшая сестра также окончила педагогический вуз и теперь занимается с детьми английским языком.Все мои родственники очень любят свою работу и уважительно отзываются о ней. Несмотря на это, они никогда не оказывали на меня давления, позволяя самой выбирать свой дальнейший путь. И я выбрала. Я хочу стать учителем, так как эта профессия близка мне по духу. Мне очень хочется делиться своими знаниями с учениками, не только знакомя детей с наукой, но и передавая им ценный жизненный опыт.Я верю, что способна делать это. Я смогу научить детей добру и хорошему отношению к окружающим. Помогу им раскрыть свои таланты, стать организованными и уверенными в себе.В будущем я вижу себя учителем младших классов, поскольку именно эта должность позволит мне воплотить все мои желания в действительность. Я знаю, что эта работа будет любима мной, и каждый день я буду приходить в школу с удовольствием.Сейчас я готовлюсь к поступлению в тот же педагогический университет, в котором училась моя сестра. Конкурс на выбранную мной специальность никогда не был низким, поэтому очень важно хорошо сдать экзамены. ',
         image: [
             {
                 image_id: 21,
@@ -218,11 +383,20 @@ export const listData = [
     {
         id: 12,
         stock: 34,
-        list_name: 'D & Addd',
-        list_text: '1 Cushion-cut London Blue Topaz 13x10 mm weight 7.06 carats.',
+        stock_ru: 'В наличии',
+        stock_en: 'In stock',
+        list_name_en: 'D & Addd',
+        list_name_ru: 'А & Фёрст',
+        list_text_en: '1 Cushion-cut London Blue Topaz 13x10 mm weight 7.06 carats.',
+        list_text_ru: '1 Лондонский голубой топаз огранки «кушон» 13х10 мм, вес 7,06 карата.',
         price: 8,
+        price_ru: 'Цена',
+        price_en: 'Price',
+        forsell: 24,
         category: 'braslet',
-        product_text: 'Abdurasul uyga ketti ozi bilan olib ketdi, u bilan esa Mumtozham ketdi.',
+        product_text: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius temporibus dolor dolorum repudiandae fugiat odio, voluptate eligendi cum consequuntur aut? Architecto enim optio cumque a, quibusdam aut quis blanditiis veritatis tenetur, in, vitae libero minima eaque ea quo commodi. Harum.. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius temporibus dolor dolorum repudiandae fugiat odio, voluptate eligendi cum consequuntur aut? Architecto enim optio cumque a, quibusdam aut quis blanditiis veritatis tenetur, in, vitae libero minima eaque ea quo commodi. Harum. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius temporibus dolor dolorum repudiandae fugiat odio, voluptate eligendi cum consequuntur aut? Architecto enim optio cumque a, quibusdam aut quis blanditiis veritatis tenetur, in, vitae libero minima eaque ea quo commodi. Harum.',
+        text_product_en: 'Choosing a future profession can be a difficult task for a high school student. After leaving school, so many roads open before us that it is sometimes very difficult to decide which one to go. But for me it was different. From an early age, I decided that I wanted to become a teacher. In my family, many were teachers: my grandmother taught students of the CPC how to knit on special machines, my mother taught mathematics at school, and my older sister also graduated from a pedagogical university and now teaches English to children. All my relatives love their work very much and speak respectfully about it. Despite this, they never put pressure on me, allowing me to choose my own path. And I chose. I want to become a teacher, as this profession is close to me in spirit. I really want to share my knowledge with students, not only introducing children to science, but also passing on valuable life experience to them. I believe that I am able to do this. I can teach children kindness and a good attitude towards others. I will help them discover their talents, become organized and self-confident. In the future, I see myself as an elementary school teacher, because this position will allow me to translate all my desires into reality. I know that this job will be loved by me, and every day I will come to school with pleasure. Now I am preparing to enter the same pedagogical university where my sister studied. The competition for my chosen specialty has never been low, so it is very important to pass the exams well.',
+        text_product_ru: 'Выбор будущей профессии может стать нелегкой задачей для старшеклассника. После окончания школы перед нами открывается столько дорог, что принять решение, какой именно из них стоит пойти, порой бывает очень непросто. Но для меня все было иначУже с ранних лет я решила, что хочу стать учителем. В моей семье многие были педагогами: бабушка обучала студентов УПК вязанию на специальных машинах, мама преподавала математику в школе, а старшая сестра также окончила педагогический вуз и теперь занимается с детьми английским языком.Все мои родственники очень любят свою работу и уважительно отзываются о ней. Несмотря на это, они никогда не оказывали на меня давления, позволяя самой выбирать свой дальнейший путь. И я выбрала. Я хочу стать учителем, так как эта профессия близка мне по духу. Мне очень хочется делиться своими знаниями с учениками, не только знакомя детей с наукой, но и передавая им ценный жизненный опыт.Я верю, что способна делать это. Я смогу научить детей добру и хорошему отношению к окружающим. Помогу им раскрыть свои таланты, стать организованными и уверенными в себе.В будущем я вижу себя учителем младших классов, поскольку именно эта должность позволит мне воплотить все мои желания в действительность. Я знаю, что эта работа будет любима мной, и каждый день я буду приходить в школу с удовольствием.Сейчас я готовлюсь к поступлению в тот же педагогический университет, в котором училась моя сестра. Конкурс на выбранную мной специальность никогда не был низким, поэтому очень важно хорошо сдать экзамены. ',
         image: [
             {
                 image_id: 23,
@@ -236,11 +410,20 @@ export const listData = [
     {
         id: 13,
         stock: 24,
-        list_name: 'D & Addd',
-        list_text: '1 Cushion-cut London Blue Topaz 13x10 mm weight 7.06 carats.',
+        stock_ru: 'В наличии',
+        stock_en: 'In stock',
+        list_name_en: 'D & Addd',
+        list_name_ru: 'А & Фёрст',
+        list_text_en: '1 Cushion-cut London Blue Topaz 13x10 mm weight 7.06 carats.',
+        list_text_ru: '1 Лондонский голубой топаз огранки «кушон» 13х10 мм, вес 7,06 карата.',
         price: 18,
+        price_ru: 'Цена',
+        price_en: 'Price',
+        forsell: 24,
         category: 'uzuk',
-        product_text: 'Abdurasul uyga ketti ozi bilan olib ketdi, u bilan esa Mumtozham ketdi.',
+        product_text: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius temporibus dolor dolorum repudiandae fugiat odio, voluptate eligendi cum consequuntur aut? Architecto enim optio cumque a, quibusdam aut quis blanditiis veritatis tenetur, in, vitae libero minima eaque ea quo commodi. Harum.. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius temporibus dolor dolorum repudiandae fugiat odio, voluptate eligendi cum consequuntur aut? Architecto enim optio cumque a, quibusdam aut quis blanditiis veritatis tenetur, in, vitae libero minima eaque ea quo commodi. Harum. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius temporibus dolor dolorum repudiandae fugiat odio, voluptate eligendi cum consequuntur aut? Architecto enim optio cumque a, quibusdam aut quis blanditiis veritatis tenetur, in, vitae libero minima eaque ea quo commodi. Harum.',
+        text_product_en: 'Choosing a future profession can be a difficult task for a high school student. After leaving school, so many roads open before us that it is sometimes very difficult to decide which one to go. But for me it was different. From an early age, I decided that I wanted to become a teacher. In my family, many were teachers: my grandmother taught students of the CPC how to knit on special machines, my mother taught mathematics at school, and my older sister also graduated from a pedagogical university and now teaches English to children. All my relatives love their work very much and speak respectfully about it. Despite this, they never put pressure on me, allowing me to choose my own path. And I chose. I want to become a teacher, as this profession is close to me in spirit. I really want to share my knowledge with students, not only introducing children to science, but also passing on valuable life experience to them. I believe that I am able to do this. I can teach children kindness and a good attitude towards others. I will help them discover their talents, become organized and self-confident. In the future, I see myself as an elementary school teacher, because this position will allow me to translate all my desires into reality. I know that this job will be loved by me, and every day I will come to school with pleasure. Now I am preparing to enter the same pedagogical university where my sister studied. The competition for my chosen specialty has never been low, so it is very important to pass the exams well.',
+        text_product_ru: 'Выбор будущей профессии может стать нелегкой задачей для старшеклассника. После окончания школы перед нами открывается столько дорог, что принять решение, какой именно из них стоит пойти, порой бывает очень непросто. Но для меня все было иначУже с ранних лет я решила, что хочу стать учителем. В моей семье многие были педагогами: бабушка обучала студентов УПК вязанию на специальных машинах, мама преподавала математику в школе, а старшая сестра также окончила педагогический вуз и теперь занимается с детьми английским языком.Все мои родственники очень любят свою работу и уважительно отзываются о ней. Несмотря на это, они никогда не оказывали на меня давления, позволяя самой выбирать свой дальнейший путь. И я выбрала. Я хочу стать учителем, так как эта профессия близка мне по духу. Мне очень хочется делиться своими знаниями с учениками, не только знакомя детей с наукой, но и передавая им ценный жизненный опыт.Я верю, что способна делать это. Я смогу научить детей добру и хорошему отношению к окружающим. Помогу им раскрыть свои таланты, стать организованными и уверенными в себе.В будущем я вижу себя учителем младших классов, поскольку именно эта должность позволит мне воплотить все мои желания в действительность. Я знаю, что эта работа будет любима мной, и каждый день я буду приходить в школу с удовольствием.Сейчас я готовлюсь к поступлению в тот же педагогический университет, в котором училась моя сестра. Конкурс на выбранную мной специальность никогда не был низким, поэтому очень важно хорошо сдать экзамены. ',
         image: [
             {
                 image_id: 25,
@@ -254,11 +437,20 @@ export const listData = [
     {
         id: 14,
         stock: 24,
-        list_name: 'D & Addd',
-        list_text: '1 Cushion-cut London Blue Topaz 13x10 mm weight 7.06 carats.',
+        stock_ru: 'В наличии',
+        stock_en: 'In stock',
+        list_name_en: 'D & Addd',
+        list_name_ru: 'А & Фёрст',
+        list_text_en: '1 Cushion-cut London Blue Topaz 13x10 mm weight 7.06 carats.',
+        list_text_ru: '1 Лондонский голубой топаз огранки «кушон» 13х10 мм, вес 7,06 карата.',
         price: 12,
+        price_ru: 'Цена',
+        price_en: 'Price',
+        forsell: 24,
         category: 'complect',
-        product_text: 'Abdurasul uyga ketti ozi bilan olib ketdi, u bilan esa Mumtozham ketdi.',
+        product_text: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius temporibus dolor dolorum repudiandae fugiat odio, voluptate eligendi cum consequuntur aut? Architecto enim optio cumque a, quibusdam aut quis blanditiis veritatis tenetur, in, vitae libero minima eaque ea quo commodi. Harum.. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius temporibus dolor dolorum repudiandae fugiat odio, voluptate eligendi cum consequuntur aut? Architecto enim optio cumque a, quibusdam aut quis blanditiis veritatis tenetur, in, vitae libero minima eaque ea quo commodi. Harum. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius temporibus dolor dolorum repudiandae fugiat odio, voluptate eligendi cum consequuntur aut? Architecto enim optio cumque a, quibusdam aut quis blanditiis veritatis tenetur, in, vitae libero minima eaque ea quo commodi. Harum.',
+        text_product_en: 'Choosing a future profession can be a difficult task for a high school student. After leaving school, so many roads open before us that it is sometimes very difficult to decide which one to go. But for me it was different. From an early age, I decided that I wanted to become a teacher. In my family, many were teachers: my grandmother taught students of the CPC how to knit on special machines, my mother taught mathematics at school, and my older sister also graduated from a pedagogical university and now teaches English to children. All my relatives love their work very much and speak respectfully about it. Despite this, they never put pressure on me, allowing me to choose my own path. And I chose. I want to become a teacher, as this profession is close to me in spirit. I really want to share my knowledge with students, not only introducing children to science, but also passing on valuable life experience to them. I believe that I am able to do this. I can teach children kindness and a good attitude towards others. I will help them discover their talents, become organized and self-confident. In the future, I see myself as an elementary school teacher, because this position will allow me to translate all my desires into reality. I know that this job will be loved by me, and every day I will come to school with pleasure. Now I am preparing to enter the same pedagogical university where my sister studied. The competition for my chosen specialty has never been low, so it is very important to pass the exams well.',
+        text_product_ru: 'Выбор будущей профессии может стать нелегкой задачей для старшеклассника. После окончания школы перед нами открывается столько дорог, что принять решение, какой именно из них стоит пойти, порой бывает очень непросто. Но для меня все было иначУже с ранних лет я решила, что хочу стать учителем. В моей семье многие были педагогами: бабушка обучала студентов УПК вязанию на специальных машинах, мама преподавала математику в школе, а старшая сестра также окончила педагогический вуз и теперь занимается с детьми английским языком.Все мои родственники очень любят свою работу и уважительно отзываются о ней. Несмотря на это, они никогда не оказывали на меня давления, позволяя самой выбирать свой дальнейший путь. И я выбрала. Я хочу стать учителем, так как эта профессия близка мне по духу. Мне очень хочется делиться своими знаниями с учениками, не только знакомя детей с наукой, но и передавая им ценный жизненный опыт.Я верю, что способна делать это. Я смогу научить детей добру и хорошему отношению к окружающим. Помогу им раскрыть свои таланты, стать организованными и уверенными в себе.В будущем я вижу себя учителем младших классов, поскольку именно эта должность позволит мне воплотить все мои желания в действительность. Я знаю, что эта работа будет любима мной, и каждый день я буду приходить в школу с удовольствием.Сейчас я готовлюсь к поступлению в тот же педагогический университет, в котором училась моя сестра. Конкурс на выбранную мной специальность никогда не был низким, поэтому очень важно хорошо сдать экзамены. ',
         image: [
             {
                 image_id: 27,
@@ -272,11 +464,20 @@ export const listData = [
     {
         id: 15,
         stock: 24,
-        list_name: 'D & Addd',
-        list_text: '1 Cushion-cut London Blue Topaz 13x10 mm weight 7.06 carats.',
+        stock_ru: 'В наличии',
+        stock_en: 'In stock',
+        list_name_en: 'D & Addd',
+        list_name_ru: 'А & Фёрст',
+        list_text_en: '1 Cushion-cut London Blue Topaz 13x10 mm weight 7.06 carats.',
+        list_text_ru: '1 Лондонский голубой топаз огранки «кушон» 13х10 мм, вес 7,06 карата.',
         price: 12,
+        price_ru: 'Цена',
+        price_en: 'Price',
+        forsell: 24,
         category: 'uzuk',
-        product_text: 'Abdurasul uyga ketti ozi bilan olib ketdi, u bilan esa Mumtozham ketdi.',
+        product_text: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius temporibus dolor dolorum repudiandae fugiat odio, voluptate eligendi cum consequuntur aut? Architecto enim optio cumque a, quibusdam aut quis blanditiis veritatis tenetur, in, vitae libero minima eaque ea quo commodi. Harum.. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius temporibus dolor dolorum repudiandae fugiat odio, voluptate eligendi cum consequuntur aut? Architecto enim optio cumque a, quibusdam aut quis blanditiis veritatis tenetur, in, vitae libero minima eaque ea quo commodi. Harum. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius temporibus dolor dolorum repudiandae fugiat odio, voluptate eligendi cum consequuntur aut? Architecto enim optio cumque a, quibusdam aut quis blanditiis veritatis tenetur, in, vitae libero minima eaque ea quo commodi. Harum.',
+        text_product_en: 'Choosing a future profession can be a difficult task for a high school student. After leaving school, so many roads open before us that it is sometimes very difficult to decide which one to go. But for me it was different. From an early age, I decided that I wanted to become a teacher. In my family, many were teachers: my grandmother taught students of the CPC how to knit on special machines, my mother taught mathematics at school, and my older sister also graduated from a pedagogical university and now teaches English to children. All my relatives love their work very much and speak respectfully about it. Despite this, they never put pressure on me, allowing me to choose my own path. And I chose. I want to become a teacher, as this profession is close to me in spirit. I really want to share my knowledge with students, not only introducing children to science, but also passing on valuable life experience to them. I believe that I am able to do this. I can teach children kindness and a good attitude towards others. I will help them discover their talents, become organized and self-confident. In the future, I see myself as an elementary school teacher, because this position will allow me to translate all my desires into reality. I know that this job will be loved by me, and every day I will come to school with pleasure. Now I am preparing to enter the same pedagogical university where my sister studied. The competition for my chosen specialty has never been low, so it is very important to pass the exams well.',
+        text_product_ru: 'Выбор будущей профессии может стать нелегкой задачей для старшеклассника. После окончания школы перед нами открывается столько дорог, что принять решение, какой именно из них стоит пойти, порой бывает очень непросто. Но для меня все было иначУже с ранних лет я решила, что хочу стать учителем. В моей семье многие были педагогами: бабушка обучала студентов УПК вязанию на специальных машинах, мама преподавала математику в школе, а старшая сестра также окончила педагогический вуз и теперь занимается с детьми английским языком.Все мои родственники очень любят свою работу и уважительно отзываются о ней. Несмотря на это, они никогда не оказывали на меня давления, позволяя самой выбирать свой дальнейший путь. И я выбрала. Я хочу стать учителем, так как эта профессия близка мне по духу. Мне очень хочется делиться своими знаниями с учениками, не только знакомя детей с наукой, но и передавая им ценный жизненный опыт.Я верю, что способна делать это. Я смогу научить детей добру и хорошему отношению к окружающим. Помогу им раскрыть свои таланты, стать организованными и уверенными в себе.В будущем я вижу себя учителем младших классов, поскольку именно эта должность позволит мне воплотить все мои желания в действительность. Я знаю, что эта работа будет любима мной, и каждый день я буду приходить в школу с удовольствием.Сейчас я готовлюсь к поступлению в тот же педагогический университет, в котором училась моя сестра. Конкурс на выбранную мной специальность никогда не был низким, поэтому очень важно хорошо сдать экзамены. ',
         image: [
             {
                 image_id: 29,
@@ -290,16 +491,7 @@ export const listData = [
 ]
 
 
-export const dataSearch = [
-    {
-        id: 1,
-        name: 'Search...'
-    },
-    {
-        id:2,
-        name: 'Поиск...'
-    }
-]
+
 
 export const catItem = [
     {
