@@ -46,18 +46,22 @@ export const selValue = [
             {
                 list_id: 1,
                 title_ru: 'Все',
+                turtle: 'all'
             },
             {
-                list_id: 2, 
-                title_ru: 'По цене ↑'
+                list_id: 2,
+                title_ru: 'По цене ↑',
+                turtle: 'ascending'
             },
             {
-                list_id: 3, 
-                title_ru: 'По цене ↓'
+                list_id: 3,
+                title_ru: 'По цене ↓',
+                turtle: 'descending'
             },
             {
-                list_id: 4, 
-                title_ru: 'Новые'
+                list_id: 4,
+                title_ru: 'Новые',
+                turtle: 'new'
             },
         ],
         id: 2,
@@ -69,17 +73,17 @@ export const selValue = [
                 turtle: 'all'
             },
             {
-                list_id: 2, 
+                list_id: 2,
                 title_en: 'By price ↑',
                 turtle: 'ascending'
             },
             {
-                list_id: 3, 
+                list_id: 3,
                 title_en: 'By price ↓',
                 turtle: 'descending'
             },
             {
-                list_id: 4, 
+                list_id: 4,
                 title_en: 'New',
                 turtle: 'new'
             },

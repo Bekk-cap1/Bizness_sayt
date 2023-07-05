@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { useState } from 'react'
 import { Autoplay, Navigation, Pagination } from 'swiper/modules'
 import { SwiperSlide, Swiper } from 'swiper/react'
@@ -52,7 +52,6 @@ function Product() {
       }
     })
     setSearchData(SearchDataList)
-    console.log(searchData);
   }
   // listData.map((e, i) => {
   //   const mat = Math.floor(((i) / 12) + 1)
@@ -63,6 +62,9 @@ function Product() {
   //     // console.log(listPagenation);
   //   }
   // })
+
+  const typeData = []
+  const [data, setData] = useState()
 
 
   const listProduct = []
@@ -77,7 +79,6 @@ function Product() {
           listPagenation.push(mat)
           // console.log(listPagenation);
         }
-        console.log(mat);
       })
     }
   }
@@ -91,15 +92,32 @@ function Product() {
         listPagenation.push(mat)
         // console.log(listPagenation);
       }
-      console.log(mat);
     })
+  }
+
+  const selType = (e) => {
+    const el = e.target.value
     
+    if (el == 'ascending') {
+      typeData.push(listData.sort(function (a, b) { return a.price - b.price }))
+    } else if (el == 'descending') {
+      typeData.push(listData.sort(function (a, b) { return b.price - a.price }))
+    } else if (el == 'new') {
+      typeData.push(listData.sort(function (a, b) { return b.id - a.id }))
+    } else {
+      typeData.push(listData.sort(function (a, b) { return a.id - b.id }))
+    }
+    // console.log(el);
+    // data.map(e=>console.log(e))
+    setData(typeData)
+    data?.map(e=>console.log(e))
+    console.log(data);
   }
 
-  const selType = (onClick)=>{
-
+  const sortter = (e)=>{
+    setListArr2(e.target.id)
+    console.log(e.target);
   }
-
 
   return (
     <div className='product'>
@@ -110,9 +128,9 @@ function Product() {
             <ul className='categoriy'>
               {
                 listArr?.map((e) => (
-                  <li className={listArrr2 === e.id ? 'cat_item_active cat_item' : 'cat_item'} onClick={() => setListArr2(e.id)}>
-                    <img src={e.image_url} alt="" />
-                    <h5>{e.title}</h5>
+                  <li name={e.name} className={listArrr2 == e.id ? 'cat_item_active cat_item' : 'cat_item'} onClick={sortter}>
+                    <img src={e.image_url} alt="" id={e.id}/>
+                    <h5 id={e.id}>{e.title}</h5>
                   </li>
                 ))
               }
@@ -131,7 +149,7 @@ function Product() {
                 {
                   selValue?.map((e) => (
                     <h4>{e[`name_${lan}`]} :
-                      <select >
+                      <select onChange={selType}>
                         {
                           e[`list_${lan}`].map((q) => (
                             <option value={q.turtle}>{q[`title_${lan}`]}</option>
