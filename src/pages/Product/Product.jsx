@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import { useState } from 'react'
 import { Autoplay, Navigation, Pagination } from 'swiper/modules'
 import { SwiperSlide, Swiper } from 'swiper/react'
-import { catItem, dataSearch, listData, selValue } from '../../assets/data/data'
+import { catItem, dataPoisk, dataSearch, listData, selValue } from '../../assets/data/data'
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
@@ -18,7 +18,7 @@ function Product() {
 
   catItem?.map((e) => {
     if (listArr.find((item) => item.title == e.title)) {
-      console.log('');
+      console.log();
     } else {
       listArr.push(e)
     }
@@ -27,25 +27,78 @@ function Product() {
   const [listArrr2, setListArr2] = useState(listArr2[0])
   const [pagination, setPagination] = useState(1)
 
-  const listProduct = []
-  console.log();
-  listProduct.push(listData.slice(pagination * 12 - 12, pagination * 12))
-  console.log(listProduct);
-
-  listData.map((e, i) => {
-    const mat = Math.floor(((i) / 12) + 1)
-    if (listPagenation.find((item) => item == mat)) {
-      console.log('');
-    } else {
-      listPagenation.push(mat)
-      console.log(listPagenation);
-    }
-  })
 
   const navigate = useNavigate()
 
   const lan = window.localStorage.getItem('language')
 
+  const SearchDataList = []
+  const [searchData, setSearchData] = useState()
+
+  const search__item = (e, i) => {
+    e.preventDefault()
+
+    const elSearch = e.target.elements.inp.value
+
+    listData?.map((e, i) => {
+      if (e.category.toLowerCase().includes(elSearch.toLowerCase())) {
+        SearchDataList.push(e)
+      }
+      else if (e[`list_name_${lan}`].toLowerCase().includes(elSearch.toLowerCase())) {
+        SearchDataList.push(e)
+      }
+      else if (e[`list_text_${lan}`].toLowerCase().includes(elSearch.toLowerCase())) {
+        SearchDataList.push(e)
+      }
+    })
+    setSearchData(SearchDataList)
+    console.log(searchData);
+  }
+  // listData.map((e, i) => {
+  //   const mat = Math.floor(((i) / 12) + 1)
+  //   if (listPagenation.find((item) => item == mat)) {
+  //     console.log();
+  //   } else {
+  //     listPagenation.push(mat)
+  //     // console.log(listPagenation);
+  //   }
+  // })
+
+
+  const listProduct = []
+  if (searchData) {
+    if (searchData.length !== 0) {
+      listProduct.push(searchData.slice(pagination * 12 - 12, pagination * 12))
+      searchData.map((e, i) => {
+        const mat = Math.floor(((i) / 12) + 1)
+        if (listPagenation.find((item) => item == mat)) {
+          console.log();
+        } else {
+          listPagenation.push(mat)
+          // console.log(listPagenation);
+        }
+        console.log(mat);
+      })
+    }
+  }
+  else {
+    listProduct.push(listData.slice(pagination * 12 - 12, pagination * 12))
+    listData.map((e, i) => {
+      const mat = Math.floor(((i) / 12) + 1)
+      if (listPagenation.find((item) => item == mat)) {
+        console.log();
+      } else {
+        listPagenation.push(mat)
+        // console.log(listPagenation);
+      }
+      console.log(mat);
+    })
+    
+  }
+
+  const selType = (onClick)=>{
+
+  }
 
 
   return (
@@ -69,14 +122,16 @@ function Product() {
           <main>
             <div className='product__search'>
               <div>
-                <input type="text" id='search' placeholder={dataSearch[0][`name_${lan}`]} />
-                <label htmlFor="search"></label>
+                <form action="#" onSubmit={search__item}>
+                  <input name='inp' id='inp_search' type="search" placeholder={dataSearch[0][`name_${lan}`]} />
+                  <button type='submit'>{dataPoisk[0][`name_${lan}`]}</button>
+                </form>
               </div>
               <div>
                 {
                   selValue?.map((e) => (
-                    <h4>{e[`name_${lan}`]} : 
-                      <select>
+                    <h4>{e[`name_${lan}`]} :
+                      <select >
                         {
                           e[`list_${lan}`].map((q) => (
                             <option value={q.turtle}>{q[`title_${lan}`]}</option>

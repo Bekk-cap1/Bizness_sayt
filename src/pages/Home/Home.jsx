@@ -1,4 +1,4 @@
-import { React, useRef } from 'react'
+import { React, useRef, useState } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import './Home.scss'
 import 'swiper/css';
@@ -9,9 +9,11 @@ import 'swiper/css/navigation';
 
 // import required modules
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
-import { dataPage, dataSearch, listData } from '../../assets/data/data';
+import { dataPage, dataPoisk, dataSearch, listData } from '../../assets/data/data';
 import { useNavigate } from 'react-router-dom';
 // import { Scrollbar } from "swiper";
+
+
 
 function Home() {
 
@@ -23,16 +25,45 @@ function Home() {
   };
 
 
-  const listHome = []
-  listHome.push(listData.slice(-10, -1))
-  console.log(listHome);
+
   const navigate = useNavigate()
 
 
   const lan = window.localStorage.getItem('language')
 
 
-  return (
+  const SearchDataList = []
+  const [searchData, setSearchData] = useState()
+
+  const search__item = (e, i) => {
+    e.preventDefault()
+
+
+    const elSearch = e.target.elements.inp.value
+
+    listData?.map((e, i) => {
+      if (e.category.toLowerCase().includes(elSearch.toLowerCase())) {
+        SearchDataList.push(e)
+      }
+      else if (e[`list_name_${lan}`].toLowerCase().includes(elSearch.toLowerCase())) {
+        SearchDataList.push(e)
+      }
+      else if (e[`list_text_${lan}`].toLowerCase().includes(elSearch.toLowerCase())) {
+        SearchDataList.push(e)
+      }
+    })
+    setSearchData(SearchDataList)
+  }
+  const listHome = []
+  if(searchData){
+    if(searchData.length !== 0)
+    listHome.push(searchData.slice(0,9))
+  }
+  else{
+    listHome.push(listData.slice(-10, -1))
+  }
+  
+  return (                                                
     <div className='home'>
       <div className="home__container">
         <div className="home__container__inner">
@@ -65,8 +96,10 @@ function Home() {
             </Swiper>
           </div>
           <div className="search">
-            <input id='inp_search' type="search" placeholder={dataSearch[0][`name_${lan}`]} />
-            <label htmlFor="inp_search"><i class="bi bi-search"></i></label>
+            <form action="#" onSubmit={search__item}>
+              <input name='inp' id='inp_search' type="search" placeholder={dataSearch[0][`name_${lan}`]} />
+              <button type='submit'>{dataPoisk[0][`name_${lan}`]}</button>
+            </form>
           </div>
 
           <div className="list">

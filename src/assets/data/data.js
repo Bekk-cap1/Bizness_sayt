@@ -21,7 +21,13 @@ export const dataSearch = [
         id: 1,
         name_en: 'Search...',
         name_ru: 'Поиск...'
-
+    }
+]
+export const dataPoisk = [
+    {
+        id: 1,
+        name_en: 'Search',
+        name_ru: 'Поиск'
     }
 ]
 
@@ -87,9 +93,9 @@ export const listData = [
         stock: 24,
         stock_ru: 'В наличии',
         stock_en: 'In stock',
-        list_name_en: 'A & Furst',
+        list_name_en: 'A & Sabina',
         list_name_ru: 'А & Фёрст',
-        list_text_en: '1 Cushion-cut London Blue Topaz 13x10 mm weight 7.06 carats.',
+        list_text_en: '1 dushion-cuttt London Blue Topaz 13x10 mm weight 7.06 carats.',
         list_text_ru: '1 Лондонский голубой топаз огранки «кушон» 13х10 мм, вес 7,06 карата.',
         price: 24,
         price_ru: 'Цена',
