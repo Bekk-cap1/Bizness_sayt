@@ -72,7 +72,7 @@ function Home() {
               spaceBetween={30}
               centeredSlides={true}
               autoplay={{
-                delay: 2500,
+                delay: 4500,
                 disableOnInteraction: false,
               }}
               pagination={{
@@ -97,7 +97,7 @@ function Home() {
           </div>
           <div className="search">
             <form action="#" onSubmit={search__item}>
-              <input name='inp' id='inp_search' type="search" placeholder={dataSearch[0][`name_${lan}`]} />
+              <input name='inp' id='inp_search' placeholder={dataSearch[0][`name_${lan}`]} />
               <button type='submit'>{dataPoisk[0][`name_${lan}`]}</button>
             </form>
           </div>
