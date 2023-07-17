@@ -16,8 +16,8 @@ const listPagenation = []
 
 function Product() {
 
-  catItem?.map((e) => {
-    if (listArr.find((item) => item.title == e.title)) {
+  listData?.map((e) => {
+    if (listArr.find((item) => item.category == e.category)) {
       console.log();
     } else {
       listArr.push(e)
@@ -26,7 +26,7 @@ function Product() {
 
   const [listArrr2, setListArr2] = useState(listArr2[0])
   const [pagination, setPagination] = useState(1)
-
+  const [count, setCount] = useState(0)
 
   const navigate = useNavigate()
 
@@ -39,7 +39,7 @@ function Product() {
     e.preventDefault()
 
     const elSearch = e.target.elements.inp.value
-
+    setCount(count + 1)
     listData?.map((e, i) => {
       if (e.category.toLowerCase().includes(elSearch.toLowerCase())) {
         SearchDataList.push(e)
@@ -48,6 +48,8 @@ function Product() {
         SearchDataList.push(e)
       }
       else if (e[`list_text_${lan}`].toLowerCase().includes(elSearch.toLowerCase())) {
+        SearchDataList.push(e)
+      } else if (elSearch == '') {
         SearchDataList.push(e)
       }
     })
@@ -68,6 +70,7 @@ function Product() {
 
 
   const listProduct = []
+
   if (searchData) {
     if (searchData.length !== 0) {
       listProduct.push(searchData.slice(pagination * 12 - 12, pagination * 12))
@@ -97,27 +100,48 @@ function Product() {
 
   const selType = (e) => {
     const el = e.target.value
-    
-    if (el == 'ascending') {
-      typeData.push(listData.sort(function (a, b) { return a.price - b.price }))
-    } else if (el == 'descending') {
-      typeData.push(listData.sort(function (a, b) { return b.price - a.price }))
-    } else if (el == 'new') {
-      typeData.push(listData.sort(function (a, b) { return b.id - a.id }))
-    } else {
-      typeData.push(listData.sort(function (a, b) { return a.id - b.id }))
+    setCount(count + 1)
+    // console.log(listProduct[0].sort(function (a, b) { return a.price - b.price }));
+    if (searchData) {
+      if (searchData.length !== 0) {
+        if (el == 'ascending') {
+          typeData.push(listProduct[0].sort(function (a, b) { return a.price - b.price }))
+        } else if (el == 'descending') {
+          typeData.push(listProduct[0].sort(function (a, b) { return b.price - a.price }))
+        } else if (el == 'new') {
+          typeData.push(listProduct[0].sort(function (a, b) { return b.id - a.id }))
+        } else {
+          typeData.push(listProduct[0].sort(function (a, b) { return a.id - b.id }))
+        }
+        // console.log(typeData[0]);
+      }
     }
-    // console.log(el);
-    // data.map(e=>console.log(e))
-    setData(typeData)
-    data?.map(e=>console.log(e))
-    console.log(data);
+    else {
+      if (el == 'ascending') {
+        typeData.push(listData.sort(function (a, b) { return a.price - b.price }))
+      } else if (el == 'descending') {
+        typeData.push(listData.sort(function (a, b) { return b.price - a.price }))
+      } else if (el == 'new') {
+        typeData.push(listData.sort(function (a, b) { return b.id - a.id }))
+      } else {
+        typeData.push(listData.sort(function (a, b) { return a.id - b.id }))
+      }
+    }
+    setData(typeData[0])
+  }
+  if (data)
+    listProduct.push(data)
+
+
+  const sortter = (e) => {
+    
+    setListArr2(e.target.id)
+    
+    console.log(e.target.parentElement);
+    e.target.parentElement.classList.toggle('cat_item_active')
   }
 
-  const sortter = (e)=>{
-    setListArr2(e.target.id)
-    console.log(e.target);
-  }
+  
 
   return (
     <div className='product'>
@@ -128,9 +152,9 @@ function Product() {
             <ul className='categoriy'>
               {
                 listArr?.map((e) => (
-                  <li name={e.name} className={listArrr2 == e.id ? 'cat_item_active cat_item' : 'cat_item'} onClick={sortter}>
-                    <img src={e.image_url} alt="" id={e.id}/>
-                    <h5 id={e.id}>{e.title}</h5>
+                  <li name={e.name} className={listArrr2 == e.id ? 'cat_item' : 'cat_item'} onClick={sortter}>
+                    <img src={e.image[0].image_url} alt="" id={e.id} />
+                    <h5 id={e.id}>{e.category}</h5>
                   </li>
                 ))
               }
@@ -164,36 +188,68 @@ function Product() {
             <hr />
             <ul>
               {
-                listProduct[0]?.map((e, i) => (
-                  <li onClick={() => navigate(`/products/${e.id}`)}>
-                    <Swiper
-                      spaceBetween={30}
-                      centeredSlides={true}
-                      autoplay={{
-                        delay: 2500,
-                        disableOnInteraction: false,
-                      }}
-                      pagination={{
-                        clickable: true,
-                      }}
-                      navigation={true}
-                      modules={[Autoplay, Pagination, Navigation]}
-                      className="mySwiper"
-                    >
-                      {
-                        e.image.map((t) => (
-                          <SwiperSlide id={t.image_id}><img src={t.image_url} alt="" /></SwiperSlide>
-                        ))
-                      }
-                    </Swiper>
-                    <div className="about_product">
-                      <h6>{e[`stock_${lan}`]} : {e.stock}</h6>
-                      <h2>{e[`list_name_${lan}`]}</h2>
-                      <p>{e[`list_text_${lan}`]}</p>
-                      <h3>{e[`price_${lan}`]} : {e.price}$</h3>
-                    </div>
-                  </li>
-                ))
+                listProduct[1] ?
+                  listProduct[1].map((e) => (
+                    <li onClick={() => navigate(`/products/${e.id}`)}>
+                      <Swiper
+                        spaceBetween={30}
+                        centeredSlides={true}
+                        autoplay={{
+                          delay: 2500,
+                          disableOnInteraction: false,
+                        }}
+                        pagination={{
+                          clickable: true,
+                        }}
+                        navigation={true}
+                        modules={[Autoplay, Pagination, Navigation]}
+                        className="mySwiper"
+                      >
+                        {
+                          e.image.map((t) => (
+                            <SwiperSlide id={t.image_id}><img src={t.image_url} alt="" /></SwiperSlide>
+                          ))
+                        }
+                      </Swiper>
+                      <div className="about_product">
+                        <h6>{e[`stock_${lan}`]} : {e.stock}</h6>
+                        <h2>{e[`list_name_${lan}`]}</h2>
+                        <p>{e[`list_text_${lan}`]}</p>
+                        <h3>{e[`price_${lan}`]} : {e.price}$</h3>
+                      </div>
+                    </li>
+                  ))
+                  :
+                  listProduct[0]?.map((e, i) => (
+                    <li onClick={() => navigate(`/products/${e.id}`)}>
+                      <Swiper
+                        spaceBetween={30}
+                        centeredSlides={true}
+                        autoplay={{
+                          delay: 2500,
+                          disableOnInteraction: false,
+                        }}
+                        pagination={{
+                          clickable: true,
+                        }}
+                        navigation={true}
+                        modules={[Autoplay, Pagination, Navigation]}
+                        className="mySwiper"
+                      >
+                        {
+                          e.image.map((t) => (
+                            <SwiperSlide id={t.image_id}><img src={t.image_url} alt="" /></SwiperSlide>
+                          ))
+                        }
+                      </Swiper>
+                      <div className="about_product">
+                        <h6>{e[`stock_${lan}`]} : {e.stock}</h6>
+                        <h2>{e[`list_name_${lan}`]}</h2>
+                        <p>{e[`list_text_${lan}`]}</p>
+                        <h3>{e[`price_${lan}`]} : {e.price}$</h3>
+                      </div>
+                    </li>
+                  ))
               }
             </ul>
 

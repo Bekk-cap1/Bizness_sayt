@@ -46,10 +46,12 @@
                         border-radius: 25px;
                         position: relative;
                         cursor: pointer;
-                        transition: .2s ease-in-out;
+                        transition: .4s ease;
+                        margin: 1%;
 
                         img {
                             border-radius: 25px;
+                            width: 100%;
                         }
 
                         h5 {
@@ -111,7 +113,7 @@
                                 background: rgb(255, 0, 255);
                                 color: #fff;
                                 font-size: 22px;
-                                z-index: 999;
+                                z-index: 1;
                                 margin-left: -150px;
                                 margin-top: -20px;
                                 transition: 0.2s ease-in-out;

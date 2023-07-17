@@ -17,29 +17,10 @@ import 'swiper/css/pagination';
 import { FreeMode, Pagination } from 'swiper/modules';
 
 function Catalog__product() {
-    const [count, setCount] = useState(0)
-    const { catal, setCatal } = useContext(Context)
     const catRef = useRef()
     const [url_img, setUrl_img] = useState(0)
     const [product, setProduct] = useState(1)
-    useEffect(() => {
-        catRef.current.style.transform = `translateY(${count}%)`
-        catRef.current.style.transition = `0.3s ease-in-out all`
-    })
-    const slideFive = useRef()
-    const [sliderFive, setSliderFive] = useState(0)
-    // useEffect(() => {
-    //     console.log(slideFive.current);
-    //     slideFive.current.style.transition = `0.4s ease-in-out`
-    //     slideFive.current.style.transform = `translate(${sliderFive}%)`
-    // }, [sliderFive])
-    // const slideFour = useRef()
-    // const [sliderFour, setSliderFour] = useState(0)
-    // useEffect(() => {
-    //     slideFour.current.style.transition = `0.4s ease-in-out`
-    //     slideFour.current.style.transform = `translate(${sliderFour}%)`
-    // }, [sliderFour])
-
+    const [id, setId] = useState()
 
     const local = useLocation()
     const navig = local.pathname.split('/products/').join('')
@@ -68,6 +49,7 @@ function Catalog__product() {
                                 {
                                     listData?.map((e, i) => (
                                         navig == e.id ?
+                                            
                                             <>
                                                 <h2>{e[`list_text_${lan}`]}</h2>
                                                 <span>
@@ -85,7 +67,7 @@ function Catalog__product() {
                                                 <hr />
                                                 <span>
                                                     <h2>{e[`price_${lan}`]}:</h2>
-                                                    <b>{((e.price - (e.forsell !== 0 ? e.price * e.forsell / 100 : e.price)) * product).toFixed(1)} $</b>
+                                                    <b>{((e.price - (e.forsell !== null ? e.price * e.forsell / 100 : e.price)) * product).toFixed(1)} $</b>
                                                     <h4>{(e.forsell !== 0 ? e.price : '') + '$'}</h4>
                                                 </span>
                                             </> : ''
@@ -93,9 +75,17 @@ function Catalog__product() {
                                 }
                                 <div>
                                     <span className='span__div'>
-                                        <b onClick={() => setProduct(product - 1)}>-</b>
-                                        <b>{product}</b>
-                                        <b onClick={() => setProduct(product + 1)}>+</b>
+                                        {
+                                            listData?.map((e) => (
+                                                navig == e.id ?
+                                                    <>
+                                                        <b onClick={() => product !== 1 ? setProduct(product - 1) : ''}>-</b>
+                                                        <b>{product}</b>
+                                                        <b onClick={() => e.stock > product ? setProduct(product + 1) : ''}>+</b>
+                                                    </>
+                                                    : ''
+                                            ))
+                                        }
                                     </span>
                                 </div>
                                 <hr />
@@ -138,7 +128,7 @@ function Catalog__product() {
                     <div className='opisaniye'>
                         <div>
                             {
-                                opisanie?.map((e)=>(
+                                opisanie?.map((e) => (
                                     <h2>{e[`name_${lan}`]}</h2>
                                 ))
                             }
@@ -152,6 +142,15 @@ function Catalog__product() {
                         </div>
                     </div>
                     <hr />
+
+                    <div>
+                        {/* {
+                            listData?.map((e, i) => (
+                                navig == e.id ? 
+                                            
+                            ))
+                        } */}
+                    </div>
                 </div>
 
             </div>

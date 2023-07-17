@@ -164,7 +164,7 @@
                         background: rgb(255, 0, 255);
                         color: #fff;
                         font-size: 22px;
-                        z-index: 999;
+                        z-index: 1;
                         transition: 0.2s ease-in-out;
                         &:active{
                             transform: scale(.95);
